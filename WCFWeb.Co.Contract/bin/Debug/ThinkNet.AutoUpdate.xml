@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ThinkNet.AutoUpdate</name>
+    </assembly>
+    <members>
+        <member name="T:ThinkNet.AutoUpdate.AutoUpdaterClient">
+            <summary>
+            客户端更新
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.AutoUpdaterClient._mUpdateConfig">
+            <summary>
+            更新配置对象
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.AutoUpdaterClient._isNeedRestart">
+            <summary>
+            是否需要重启
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.AutoUpdaterClient._downloadFileListTemp">
+            <summary>
+            下载文件列表(临时缓存,回滚)
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.AutoUpdaterClient._RemoteVersion">
+            <summary>
+            远程版本号
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.AutoUpdaterClient._RemoteDescription">
+            <summary>
+            远程描述
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.AutoUpdaterClient._proxy">
+            <summary>
+            服务代理
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.AutoUpdaterClient._ftpWeb">
+            <summary>
+            服务代理
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fileName">更新配置文件(全路径)</param>
+            <param name="version">版本号</param>
+            <param name="enterpriseCode">企业编号</param>
+            <param name="address">服务器地址(IP地址+:+端口号)</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.RollBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.DownloadFiles(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo})">
+            <summary>
+            下载文件
+            </summary>
+            <param name="downloadList">需要下载的文件列表</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.ParseRemoteXmlExtranet(System.String@,System.String@)">
+            <summary>
+            解释外网的远程配置文件
+            </summary>
+            <param name="version"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.ParseRemoteXmlIntranet(System.String@,System.String@)">
+            <summary>
+            解释内网的远程配置文件
+            </summary>
+            <param name="version"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.CheckIntranetCorrect">
+            <summary>
+            检查内部网络是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.CreateUpdateFileProxy">
+            <summary>
+            创建WCF服务代理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.CheckExtranetCorrect">
+            <summary>
+            检查外部网络是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.AutoUpdaterClient.CheckNetwork(System.String)">
+            <summary>
+            检查网络是否连通
+            </summary>
+            <param name="address">IP地址或网址</param>
+            <returns></returns>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.AutoUpdaterClient.IsExtranet">
+            <summary>
+            是否通过外网更新
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.AutoUpdaterClient.IsFtp">
+            <summary>
+            如果IsExtranet为true,判断是否通FTP更新
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.DownloadFileInfo">
+            <summary>
+            下载文件对象
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.DownloadFileInfo.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            下载文件对象
+            </summary>
+            <param name="downloadUrl">下载文件路径</param>
+            <param name="fileFullName">(本地)文件路径(包括名称)</param>
+            <param name="ver">最新版本</param>
+            <param name="size">大小</param>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.DownloadFileInfo.DownloadUrl">
+            <summary>
+            下载文件路径
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.DownloadFileInfo.FileFullName">
+            <summary>
+            (本地)文件路径(包括名称)
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.DownloadFileInfo.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.DownloadFileInfo.LastVer">
+            <summary>
+            最新版本
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.DownloadFileInfo.Size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.FrmDownloadConfirm">
+            <summary>
+            下载确认窗口
+            </summary>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.FrmDownloadConfirm._downloadFileList">
+            <summary>
+            需要下载的文件列表
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmDownloadConfirm.#ctor(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo})">
+            <summary>
+            
+            </summary>
+            <param name="downloadfileList">需要下载的文件列表</param>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.FrmDownloadConfirm.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmDownloadConfirm.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmDownloadConfirm.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.FrmFtpProgress">
+            <summary>
+            下载进度条
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmFtpProgress.#ctor(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo})">
+            <summary>
+            
+            </summary>
+            <param name="downloadfileList">需要下载的文件列表</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmFtpProgress.#ctor(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="downloadfileList">需要下载的文件列表</param>
+            <param name="systemBinUrl"></param>
+            <param name="tempFolder"></param>
+            <param name="updateConfigName"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmFtpProgress.ShowCurrentlabelText(System.String)">
+            <summary>
+            显示正在下载的信息
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmFtpProgress.Exit(System.Boolean)">
+            <summary>
+            退出
+            </summary>
+            <param name="success"></param>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.FrmFtpProgress.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmFtpProgress.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmFtpProgress.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.FrmFtpProgress.FtpWeb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.FrmHttpProgress">
+            <summary>
+            下载进度条
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmHttpProgress.#ctor(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo})">
+            <summary>
+            
+            </summary>
+            <param name="downloadfileList">需要下载的文件列表</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmHttpProgress.#ctor(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="downloadfileList">需要下载的文件列表</param>
+            <param name="systemBinUrl"></param>
+            <param name="tempFolder"></param>
+            <param name="updateConfigName"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmHttpProgress.SetProcessBar(System.Int32,System.Int32)">
+            <summary>
+            设置进度
+            </summary>
+            <param name="current"></param>
+            <param name="total"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmHttpProgress.ShowCurrentDownloadFileName(System.String)">
+            <summary>
+            显示当前下载的文件名称
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmHttpProgress.Exit(System.Boolean)">
+            <summary>
+            退出
+            </summary>
+            <param name="success"></param>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.FrmHttpProgress.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmHttpProgress.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmHttpProgress.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.FrmWcfProgress">
+            <summary>
+            下载进度条
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmWcfProgress.#ctor(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo})">
+            <summary>
+            
+            </summary>
+            <param name="downloadfileList">需要下载的文件列表</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmWcfProgress.#ctor(System.Collections.Generic.List{ThinkNet.AutoUpdate.DownloadFileInfo},System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="downloadfileList">需要下载的文件列表</param>
+            <param name="systemBinUrl"></param>
+            <param name="tempFolder"></param>
+            <param name="updateConfigName"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmWcfProgress.ShowCurrentlabelText(System.String)">
+            <summary>
+            显示正在下载的信息
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmWcfProgress.Exit(System.Boolean)">
+            <summary>
+            退出
+            </summary>
+            <param name="success"></param>
+        </member>
+        <member name="F:ThinkNet.AutoUpdate.FrmWcfProgress.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmWcfProgress.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.FrmWcfProgress.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.FrmWcfProgress.Proxy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.IUpdateFileService">
+            <summary>
+            Wcf下载更新文件契约
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.IUpdateFileService.IsExistUpdateFileXml(System.String)">
+            <summary>
+            是否存在需要更新的文件列表配置文件
+            </summary>
+            <param name="fileName">配置文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.IUpdateFileService.GetUpdateFileXml(System.String)">
+            <summary>
+            获取需要更新的文件列表(xml文件内容)
+            </summary>
+            <param name="fileName">文件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.IUpdateFileService.DownLoadFile(ThinkNet.AutoUpdate.UpdateFileInfo)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="mFileInfo">下载文件信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.UpdateFileInfo">
+            <summary>
+            下载更新文件的信息
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateFileInfo.FileName">
+            <summary>
+            文件原始名称
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateFileInfo.FileSaveName">
+            <summary>
+            文件保存名称
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateFileInfo.FileData">
+            <summary>
+            传递的字节
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateFileInfo.Length">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateFileInfo.Offset">
+            <summary>
+            文件的偏移量
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateFileInfo.FileCategory">
+            <summary>
+            文件分类，如：Supplier
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateFileInfo.ErrorMessage">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.LocalFile">
+            <summary>
+            本地文件对象
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.LocalFile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.LocalFile.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="ver"></param>
+            <param name="size"></param>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.LocalFile.Path">
+            <summary>
+            文件路径(包括名称)
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.LocalFile.LastVer">
+            <summary>
+            最新版本
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.LocalFile.Size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.RemoteFile">
+            <summary>
+            远程文件对象
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.RemoteFile.#ctor(System.Xml.XmlNode)">
+            <summary>
+            远程文件对象
+            </summary>
+            <param name="node">远程配置文件的文件节点</param>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.RemoteFile.Path">
+            <summary>
+            文件路径(包括名称)
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.RemoteFile.Url">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.RemoteFile.LastVer">
+            <summary>
+            最新版本
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.RemoteFile.Size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.RemoteFile.NeedRestart">
+            <summary>
+            是否需要重启
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.UpdateConfig">
+            <summary>
+            更新配置对象
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.UpdateConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.UpdateConfig.LoadUpdateConfig(System.String)">
+            <summary>
+            加载配置文件到对象
+            </summary>
+            <param name="fileName">配置文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.UpdateConfig.SaveUpdateConfig(System.String)">
+            <summary>
+            保存配置文件
+            </summary>
+            <param name="fileName">配置文件路径</param>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateConfig.Enabled">
+            <summary>
+            是否启用更新
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateConfig.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateConfig.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateConfig.ServerUrl">
+            <summary>
+            外网地址
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateConfig.IntranetUrl">
+            <summary>
+            内网地址
+            </summary>
+        </member>
+        <member name="P:ThinkNet.AutoUpdate.UpdateConfig.LocalFileList">
+            <summary>
+            本地文件列表
+            </summary>
+        </member>
+        <member name="T:ThinkNet.AutoUpdate.LocalFileList">
+            <summary>
+            本地文件列表
+            </summary>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.Utility.GetFolderUrl(ThinkNet.AutoUpdate.DownloadFileInfo,System.String,System.String)">
+            <summary>
+            下载文件的文件夹路径
+            </summary>
+            <param name="file"></param>
+            <param name="systemBinUrl"></param>
+            <param name="tempFolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.Utility.MoveFolderToOld(System.String,System.String)">
+            <summary>
+            删除并移动文件
+            </summary>
+            <param name="oldPath"></param>
+            <param name="newPath"></param>
+        </member>
+        <member name="M:ThinkNet.AutoUpdate.Utility.RestartApplication">
+            <summary>
+            重启程序
+            </summary>
+        </member>
+    </members>
+</doc>

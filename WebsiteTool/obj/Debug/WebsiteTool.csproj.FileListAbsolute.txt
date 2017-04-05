@@ -1,0 +1,10 @@
+D:\TestWCF\WCFWeb\WCFWeb\WebsiteTool\bin\Debug\WebsiteTool.dll
+D:\TestWCF\WCFWeb\WCFWeb\WebsiteTool\bin\Debug\WebsiteTool.pdb
+D:\TestWCF\WCFWeb\WCFWeb\WebsiteTool\obj\Debug\WebsiteTool.csprojResolveAssemblyReference.cache
+D:\TestWCF\WCFWeb\WCFWeb\WebsiteTool\obj\Debug\WebsiteTool.dll
+D:\TestWCF\WCFWeb\WCFWeb\WebsiteTool\obj\Debug\WebsiteTool.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WebsiteTool\bin\Debug\WebsiteTool.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WebsiteTool\bin\Debug\WebsiteTool.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WebsiteTool\obj\Debug\WebsiteTool.csprojResolveAssemblyReference.cache
+D:\TestWCF\ThinkVersions\WCFWeb\WebsiteTool\obj\Debug\WebsiteTool.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WebsiteTool\obj\Debug\WebsiteTool.pdb

@@ -1,0 +1,8 @@
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\bin\Debug\WCFWeb.Infrastructure.Co.dll
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\bin\Debug\WCFWeb.Infrastructure.Co.pdb
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\bin\Debug\ThinkNet.Utility.dll
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\bin\Debug\Newtonsoft.Json.dll
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\bin\Debug\ThinkNet.Utility.xml
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\obj\Debug\WCFWeb.Infrastructure.Co.csprojResolveAssemblyReference.cache
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\obj\Debug\WCFWeb.Infrastructure.Co.dll
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Infrastructure.Co\obj\Debug\WCFWeb.Infrastructure.Co.pdb

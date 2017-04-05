@@ -1,0 +1,10 @@
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\bin\x86\Debug\Co.Transfer.dll
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\bin\x86\Debug\Co.Transfer.pdb
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\obj\x86\Debug\Co.Transfer.dll
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\obj\x86\Debug\Co.Transfer.pdb
+D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\obj\x86\Debug\WCFWeb.Co.Transfer.csprojResolveAssemblyReference.cache
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Transfer\bin\x86\Debug\Co.Transfer.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Transfer\bin\x86\Debug\Co.Transfer.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Transfer\obj\x86\Debug\WCFWeb.Co.Transfer.csprojResolveAssemblyReference.cache
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Transfer\obj\x86\Debug\Co.Transfer.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Transfer\obj\x86\Debug\Co.Transfer.pdb
