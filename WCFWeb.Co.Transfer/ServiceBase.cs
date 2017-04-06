@@ -7,6 +7,6 @@ namespace WCFWeb.Co.Transfer
 {
     public class ServiceBase
     {
-
+         
     }
 }
