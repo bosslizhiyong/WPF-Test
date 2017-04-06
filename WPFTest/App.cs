@@ -15,10 +15,19 @@ namespace WPFTest
             
             // 定义Application对象作为整个应用程序入口  
             Application app = new Application();
+       
             // 通过Url的方式启动
             app.StartupUri = new Uri("/View/MainWindow.xaml", UriKind.Relative);
+            app.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+            app.Exit += app_Exit;
             app.Run();
         }
+
+       static void app_Exit(object sender, ExitEventArgs e)
+       {
+          MessageBox.Show(""+e.ApplicationExitCode);//  e.ApplicationExitCode
+
+       }
 
     }
 }
