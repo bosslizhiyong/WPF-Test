@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UpdateConfig>
+  <Version>2.1.0.0</Version>
+  <Description></Description>
+  <UpdateFileList>
+    <file path="ThinkCRM.Infrastructure.Co.dll"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Infrastructure.Co.dll" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkCRM.Infrastructure.DataEntity.Co.dll"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Infrastructure.DataEntity.Co.dll" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkCRM.Service.Co.Common.dll"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Service.Co.Common.dll" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkCRM.Service.Co.Proxy.dll"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Service.Co.Proxy.dll" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkCRM.Service.Co.WCF.Contract.dll"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Service.Co.WCF.Contract.dll" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkCRM.Win.Co.Client.exe"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Win.Co.Client.exe" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkCRM.Win.Co.Client.exe.config"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Win.Co.Client.exe.config" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkCRM.Win.Controls.dll"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkCRM.Win.Controls.dll" lastver="1.0.0.1" size="100000" needRestart="true" />
+    <file path="ThinkNet.Core.dll"  url="http://122.114.129.137:8094/0001/UpdateFile/ThinkNet.Core.dll" lastver="1.0.0.1" size="100000" needRestart="true" />
+  </UpdateFileList>
+</UpdateConfig>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <FtpConfig>
+    <RemoteHost>192.168.1.150</RemoteHost>
+    <RemotePort>2105</RemotePort>
+    <UserName>yiguanjia</UserName>
+    <Password>K6cFJbuAoI8=</Password><!--abc123!-->
+  </FtpConfig>
+</configuration>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3151A153-5C54-4C9E-9E7F-99EE37C46CB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThinkNet.Utility</RootNamespace>
+    <AssemblyName>ThinkNet.Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ThinkNet.Utility.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Reference\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\Reference\MySql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Reference\SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crypto\AES.cs" />
+    <Compile Include="Crypto\CryptoFactory.cs" />
+    <Compile Include="Crypto\DES.cs" />
+    <Compile Include="Crypto\ICrypto.cs" />
+    <Compile Include="Crypto\MD5.cs" />
+    <Compile Include="Crypto\RC2.cs" />
+    <Compile Include="Crypto\SHA1.cs" />
+    <Compile Include="Crypto\SHA256.cs" />
+    <Compile Include="Crypto\TripleDES.cs" />
+    <Compile Include="Database\DatabaseHelper.cs" />
+    <Compile Include="Database\DatabaseHelperFactory.cs" />
+    <Compile Include="Database\MySQLHelper.cs" />
+    <Compile Include="Database\OleDBHelper.cs" />
+    <Compile Include="Database\OracleHelper.cs" />
+    <Compile Include="Database\SQLLiteHelper.cs" />
+    <Compile Include="Database\SQLServerHelper.cs" />
+    <Compile Include="DataType\ConvertChIAmountHelper.cs" />
+    <Compile Include="DataType\ConvertDataTableToList.cs" />
+    <Compile Include="DataType\DataTypeConvert.cs" />
+    <Compile Include="DataType\ParameterValidator.cs" />
+    <Compile Include="DataType\PinYinConverter.cs" />
+    <Compile Include="Enum\EnumHelper.cs" />
+    <Compile Include="Enum\EnumItem.cs" />
+    <Compile Include="File\DirectoryHelper.cs" />
+    <Compile Include="File\FileHelper.cs" />
+    <Compile Include="File\XmlHelper.cs" />
+    <Compile Include="File\ZipHelper.cs" />
+    <Compile Include="JSon\DateTimeConverter.cs" />
+    <Compile Include="JSon\EnumTypeConverter.cs" />
+    <Compile Include="JSon\JSonHelper.cs" />
+    <Compile Include="JSon\JSonItem.cs" />
+    <Compile Include="Log\LogManager.cs" />
+    <Compile Include="NetWork\HostService.cs" />
+    <Compile Include="NetWork\HttpHelper.cs" />
+    <Compile Include="Net\ConfigHelper.cs" />
+    <Compile Include="Net\IPHelper.cs" />
+    <Compile Include="Net\LicenseHelper.cs" />
+    <Compile Include="Net\RegisterHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflect\ReflectHelper.cs" />
+    <Compile Include="Regex\RegexAttribute.cs" />
+    <Compile Include="Regex\RegexHelper.cs" />
+    <Compile Include="Regex\RegexItem.cs" />
+    <Compile Include="Regex\RegexRule.cs" />
+    <Compile Include="Splash\FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash\FrmSplash.designer.cs">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\ISplashUI.cs" />
+    <Compile Include="Splash\Splasher.cs" />
+    <Compile Include="ValidateCode\ValidateCode.cs" />
+    <Compile Include="WebHelper\CacheHelper.cs" />
+    <Compile Include="WebHelper\CookieHelper.cs" />
+    <Compile Include="WebHelper\SessionHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log\log4net.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Splash\FrmSplash.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

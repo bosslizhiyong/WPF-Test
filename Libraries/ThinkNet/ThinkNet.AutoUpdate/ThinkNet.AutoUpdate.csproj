@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FE75224-67CD-4674-9250-73EB39C7F400}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThinkNet.AutoUpdate</RootNamespace>
+    <AssemblyName>ThinkNet.AutoUpdate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ThinkNet.AutoUpdate.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoUpdaterClient.cs" />
+    <Compile Include="DownloadFileInfo.cs" />
+    <Compile Include="FrmDownloadConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDownloadConfirm.designer.cs">
+      <DependentUpon>FrmDownloadConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFtpProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFtpProgress.designer.cs">
+      <DependentUpon>FrmFtpProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHttpProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHttpProgress.designer.cs">
+      <DependentUpon>FrmHttpProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWcfProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWcfProgress.designer.cs">
+      <DependentUpon>FrmWcfProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IUpdateFileService.cs" />
+    <Compile Include="LocalFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoteFile.cs" />
+    <Compile Include="UpdateConfig.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmDownloadConfirm.resx">
+      <DependentUpon>FrmDownloadConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFtpProgress.resx">
+      <DependentUpon>FrmFtpProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHttpProgress.resx">
+      <DependentUpon>FrmHttpProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWcfProgress.resx">
+      <DependentUpon>FrmWcfProgress.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="update.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="updateservice.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThinkNet.Utility\ThinkNet.Utility.csproj">
+      <Project>{3151a153-5c54-4c9e-9e7f-99ee37c46cb1}</Project>
+      <Name>ThinkNet.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThinkNet\ThinkNet.csproj">
+      <Project>{721c6247-d223-4da4-86d1-8d3b957fcf38}</Project>
+      <Name>ThinkNet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
