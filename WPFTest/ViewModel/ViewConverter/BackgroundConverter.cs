@@ -24,6 +24,9 @@ namespace WPFTest
             else
                 color = Colors.LightPink;
             return new SolidColorBrush(color);
+
+
+           //测试
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
