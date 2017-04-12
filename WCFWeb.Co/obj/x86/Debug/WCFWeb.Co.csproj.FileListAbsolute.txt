@@ -38,3 +38,9 @@ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkNet.Utility.xml
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\obj\x86\Debug\WCFWeb.Co.csprojResolveAssemblyReference.cache
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\obj\x86\Debug\WCFWeb.Co.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\obj\x86\Debug\WCFWeb.Co.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ExcelLibrary.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Unity.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Unity.Interception.dll

@@ -41,3 +41,10 @@ D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\DB\ThinkCRMCo4Developer.mdb
 D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\obj\Debug\Resource.baml
 D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\obj\Debug\View\MainWindow.g.cs
 D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\obj\Debug\View\MainWindow.baml
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\ExcelLibrary.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.Unity.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.Unity.Interception.dll

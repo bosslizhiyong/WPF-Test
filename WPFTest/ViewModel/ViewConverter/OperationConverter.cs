@@ -24,7 +24,6 @@ namespace WPFTest
 
             else
                 result = "关闭";
-
             return result;
         }
 

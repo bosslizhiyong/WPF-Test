@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -31,37 +32,13 @@ namespace WPFTest
         public MainWindow()
         {
             InitializeComponent();
-            ////listView.DataContext = GetDataTable();
-            //listView.DataContext = GetDataTable().DefaultView;
+            //listView.DataContext = GetDataTable();
+           // listView.DataContext = GetDataTable().DefaultView;
             //listView.SelectedIndex = 0;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-
             load();
         }
-        private DataTable GetDataTable()
-        {
-            DataTable data = new DataTable("MyDataTable");
-
-            DataColumn ID = new DataColumn("ID");//第一列
-            ID.DataType = System.Type.GetType("System.Int32");
-            //ID.AutoIncrement = true; //自动递增ID号 
-            data.Columns.Add(ID);
-
-            //设置主键
-            DataColumn[] keys = new DataColumn[1];
-            keys[0] = ID;
-            data.PrimaryKey = keys;
-
-            data.Columns.Add(new DataColumn("Name", typeof(string)));//第二列
-            data.Columns.Add(new DataColumn("Age", typeof(string)));//第三列
-
-            data.Rows.Add(1, "  XiaoM", "  20");
-            data.Rows.Add(2, "  XiaoF", "  122");
-            data.Rows.Add(3, "  XiaoA", "  29");
-            data.Rows.Add(4, "  XiaoB", "  102");
-            return data;
-        }
-
+     
         private void load()
         {
             try
@@ -69,7 +46,16 @@ namespace WPFTest
                 InitializeThinkCRMCo();
                 ApiHost apiHost = new ApiHost();
                 apiHost.StartServices();
-                listView_Service.DataContext = apiHost.DtSericer;
+
+                DataTable table = apiHost.DtSericer;
+
+                DataTable dt = table;
+                dt.Columns.Add("Operation", typeof(string));
+                foreach (DataRow dr in dt.Rows)
+                    dr["Operation"] = dr["ServiceStatus"].ToString()=="运行"? "停止":"启动";
+
+                listView_Service.DataContext = apiHost.DtSericer.DefaultView;
+
             }
             catch (Exception ex)
             {
@@ -161,62 +147,7 @@ namespace WPFTest
 
         }
 
-        public string getNmae(string success)
-        {
-            return success;
-        
-        }
 
-
-
-        private void ModifyUI()
-        {
-
-            // 模拟一些工作正在进行
-
-            Thread.Sleep(TimeSpan.FromSeconds(2));
-
-            //lblHello.Content = "欢迎你光临WPF的世界,Dispatcher";
-
-            this.Dispatcher.Invoke(DispatcherPriority.Normal, (ThreadStart)delegate()
-            {
-
-                lblHello.Content = "欢迎你光临WPF的世界,Dispatche  同步方法 ！！";
-
-            });
-
-        }
-
-
-
-        private void btnThd_Click(object sender, RoutedEventArgs e)
-        {
-
-            Thread thread = new Thread(ModifyUI);
-
-            thread.Start();
-
-        }
-        private void btnAppBeginInvoke_Click(object sender, RoutedEventArgs e)
-        {
-
-            new Thread(() =>
-            {
-
-                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-
-                    new Action(() =>
-                    {
-
-                        Thread.Sleep(TimeSpan.FromSeconds(2));
-
-                        this.lblHello.Content = "欢迎你光临WPF的世界,Dispatche 异步方法！！" + DateTime.Now.ToString();
-
-                    }));
-
-            }).Start();
-
-        }
 
     }
 

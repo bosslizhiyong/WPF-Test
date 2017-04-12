@@ -1,0 +1,445 @@
+[1mdiff --git a/Libraries/ThinkNet/ThinkNet.v12.suo b/Libraries/ThinkNet/ThinkNet.v12.suo[m
+[1mindex 5c22e20..9e616e0 100644[m
+Binary files a/Libraries/ThinkNet/ThinkNet.v12.suo and b/Libraries/ThinkNet/ThinkNet.v12.suo differ
+[1mdiff --git a/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll b/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll[m
+[1mindex cb655ee..84b4d49 100644[m
+Binary files a/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll and b/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll differ
+[1mdiff --git a/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb b/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb[m
+[1mindex 2f19f07..7214d26 100644[m
+Binary files a/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb and b/WCFWeb.Co.Contract/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb differ
+[1mdiff --git a/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.dll b/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.dll[m
+[1mindex cb655ee..84b4d49 100644[m
+Binary files a/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.dll and b/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.dll differ
+[1mdiff --git a/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.pdb b/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.pdb[m
+[1mindex 2f19f07..7214d26 100644[m
+Binary files a/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.pdb and b/WCFWeb.Co.Contract/obj/x86/Debug/WCFWeb.Api.Co.Contract.pdb differ
+[1mdiff --git a/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.dll b/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.dll[m
+[1mindex 2dbfef2..5419b66 100644[m
+Binary files a/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.dll and b/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.dll differ
+[1mdiff --git a/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.pdb b/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.pdb[m
+[1mindex d0b08d6..ba39cf8 100644[m
+Binary files a/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.pdb and b/WCFWeb.Co.Transfer/bin/x86/Debug/Co.Transfer.pdb differ
+[1mdiff --git a/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.dll b/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.dll[m
+[1mindex 2dbfef2..5419b66 100644[m
+Binary files a/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.dll and b/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.dll differ
+[1mdiff --git a/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.pdb b/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.pdb[m
+[1mindex d0b08d6..ba39cf8 100644[m
+Binary files a/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.pdb and b/WCFWeb.Co.Transfer/obj/x86/Debug/Co.Transfer.pdb differ
+[1mdiff --git a/WCFWeb.Co/UserService.cs b/WCFWeb.Co/UserService.cs[m
+[1mindex 3ce0243..4868998 100644[m
+[1m--- a/WCFWeb.Co/UserService.cs[m
+[1m+++ b/WCFWeb.Co/UserService.cs[m
+[36m@@ -102,5 +102,6 @@[m [mnamespace WCFWeb.Co[m
+         }[m
+ [m
+ [m
+[32m+[m[41m[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/WCFWeb.Co/bin/x86/Debug/Co.Transfer.dll b/WCFWeb.Co/bin/x86/Debug/Co.Transfer.dll[m
+[1mindex 2dbfef2..5419b66 100644[m
+Binary files a/WCFWeb.Co/bin/x86/Debug/Co.Transfer.dll and b/WCFWeb.Co/bin/x86/Debug/Co.Transfer.dll differ
+[1mdiff --git a/WCFWeb.Co/bin/x86/Debug/Co.Transfer.pdb b/WCFWeb.Co/bin/x86/Debug/Co.Transfer.pdb[m
+[1mindex d0b08d6..ba39cf8 100644[m
+Binary files a/WCFWeb.Co/bin/x86/Debug/Co.Transfer.pdb and b/WCFWeb.Co/bin/x86/Debug/Co.Transfer.pdb differ
+[1mdiff --git a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll[m
+[1mindex cb655ee..84b4d49 100644[m
+Binary files a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll and b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.dll differ
+[1mdiff --git a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb[m
+[1mindex 2f19f07..7214d26 100644[m
+Binary files a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb and b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Api.Co.Contract.pdb differ
+[1mdiff --git a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.dll b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.dll[m
+[1mindex 3d7bf2d..b3395f5 100644[m
+Binary files a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.dll and b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.dll differ
+[1mdiff --git a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.pdb b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.pdb[m
+[1mindex 6ff8b4a..f81dfa2 100644[m
+Binary files a/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.pdb and b/WCFWeb.Co/bin/x86/Debug/WCFWeb.Co.pdb differ
+[1mdiff --git a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csproj.FileListAbsolute.txt b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csproj.FileListAbsolute.txt[m
+[1mindex 5a70081..a8ae837 100644[m
+[1m--- a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csproj.FileListAbsolute.txt[m
+[1m+++ b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csproj.FileListAbsolute.txt[m
+[36m@@ -38,3 +38,9 @@[m [mD:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkNet.Utility.xml[m
+ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\obj\x86\Debug\WCFWeb.Co.csprojResolveAssemblyReference.cache[m
+ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\obj\x86\Debug\WCFWeb.Co.dll[m
+ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\obj\x86\Debug\WCFWeb.Co.pdb[m
+[32m+[m[32mD:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ExcelLibrary.dll[m[41m[m
+[32m+[m[32mD:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll[m[41m[m
+[32m+[m[32mD:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll[m[41m[m
+[32m+[m[32mD:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll[m[41m[m
+[32m+[m[32mD:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Unity.dll[m[41m[m
+[32m+[m[32mD:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Unity.Interception.dll[m[41m[m
+[1mdiff --git a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csprojResolveAssemblyReference.cache b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csprojResolveAssemblyReference.cache[m
+[1mindex f431639..a8fb453 100644[m
+Binary files a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csprojResolveAssemblyReference.cache and b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.csprojResolveAssemblyReference.cache differ
+[1mdiff --git a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.dll b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.dll[m
+[1mindex 3d7bf2d..b3395f5 100644[m
+Binary files a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.dll and b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.dll differ
+[1mdiff --git a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.pdb b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.pdb[m
+[1mindex 6ff8b4a..f81dfa2 100644[m
+Binary files a/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.pdb and b/WCFWeb.Co/obj/x86/Debug/WCFWeb.Co.pdb differ
+[1mdiff --git a/WCFWeb.v12.suo b/WCFWeb.v12.suo[m
+[1mindex a97002d..83b730d 100644[m
+Binary files a/WCFWeb.v12.suo and b/WCFWeb.v12.suo differ
+[1mdiff --git a/WPFTest/App.cs b/WPFTest/App.cs[m
+[1mindex 2ab91ca..0b7042f 100644[m
+[1m--- a/WPFTest/App.cs[m
+[1m+++ b/WPFTest/App.cs[m
+[36m@@ -1,4 +1,3 @@[m
+[31m-[m
+ using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[36m@@ -26,7 +25,6 @@[m [mnamespace WPFTest[m
+        static void app_Exit(object sender, ExitEventArgs e)[m
+        {[m
+           MessageBox.Show(""+e.ApplicationExitCode);//  e.ApplicationExitCode[m
+[31m-[m
+        }[m
+ [m
+     }[m
+[1mdiff --git a/WPFTest/App.xaml b/WPFTest/App.xaml[m
+[1mindex d568ac2..ec0c0b0 100644[m
+[1m--- a/WPFTest/App.xaml[m
+[1m+++ b/WPFTest/App.xaml[m
+[36m@@ -3,14 +3,10 @@[m
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"[m
+              StartupUri="MainWindow.xaml">[m
+     <Application.Resources>[m
+[31m-        [m
+         <ResourceDictionary>[m
+             <ResourceDictionary.MergedDictionaries>[m
+                 <ResourceDictionary Source="/Dictionary.xaml"/>[m
+             </ResourceDictionary.MergedDictionaries>[m
+         </ResourceDictionary>[m
+[31m-[m
+[31m-[m
+     </Application.Resources>[m
+[31m-    [m
+ </Application>[m
+[1mdiff --git a/WPFTest/View/MainWindow.xaml b/WPFTest/View/MainWindow.xaml[m
+[1mindex 95d6850..65a8970 100644[m
+[1m--- a/WPFTest/View/MainWindow.xaml[m
+[1m+++ b/WPFTest/View/MainWindow.xaml[m
+[36m@@ -8,61 +8,15 @@[m
+         xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges"[m
+         mc:Ignorable="d" x:Class="WPFTest.MainWindow"[m
+        [m
+[31m-        Title="AIP服务器" Height="702" Width="839">[m
+[32m+[m[32m        Title="AIP服务器" Height="461.412" Width="874.215">[m[41m[m
+ [m
+     <Window.Resources>[m
+         <local:BackgroundConverter  x:Key="BackgroundConverter"/>[m
+         <local:OperationConverter  x:Key="OperationConverter"/>[m
+[31m-        <Style TargetType="{x:Type Button}" x:Key="WhiteButton">[m
+[31m-            <!--设置按钮背景色为透明-->[m
+[31m-            <Setter Property="Background"  Value="{x:Null}"/>[m
+[31m-            <!--设置按钮为无边框样式-->[m
+[31m-            <Setter Property="BorderBrush" Value="{x:Null}"/>[m
+[31m-            <!--设置字体样式-->[m
+[31m-            <Setter Property="FontFamily" Value="华文行楷"/>[m
+[31m-            <Setter Property="FontSize" Value="20"/>[m
+[31m-            <Setter Property="Foreground" Value="Black"/>[m
+[31m-            <Setter Property="FontWeight" Value="Bold"/>[m
+[31m-            <Setter Property="VerticalAlignment" Value="Top"/>[m
+[31m-            <Setter Property="Template">[m
+[31m-                <Setter.Value>[m
+[31m-                    <ControlTemplate TargetType="{x:Type Button}">[m
+[31m-                        <Grid>[m
+[31m-                            <!--设置一般情况下按钮的形态-->[m
+[31m-                            <Border x:Name="background" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Opacity="0"[m
+[31m-        						Background="{x:Null}" [m
+[31m-        						BorderBrush="{x:Null}"      [m
+[31m-        						CornerRadius="2"/>[m
+[31m-                            <Grid>[m
+[31m-                                <ContentPresenter  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>[m
+[31m-                            </Grid>[m
+[31m-                        </Grid>[m
+[31m-                        <ControlTemplate.Triggers>[m
+[31m-                            <!--当鼠标悬停在按钮上方时，按钮形态设置-->[m
+[31m-                            <Trigger Property="IsMouseOver" Value="true">[m
+[31m-                                <Setter Property="Opacity" Value="1" TargetName="background"/>[m
+[31m-                                <Setter Property="Foreground" Value="red"/>[m
+[31m-                                <Setter Property="FontSize" Value="20"/>[m
+[31m-                            </Trigger>[m
+[31m-                            <!--当鼠标按下时，按钮形态设置-->[m
+[31m-                            <Trigger Property="IsPressed" Value="true">[m
+[31m-                                <Setter Property="Background" Value="{x:Null}"/>[m
+[31m-                            </Trigger>[m
+[31m-                            <!--当按钮不可用时，按钮形态设置-->[m
+[31m-                            <Trigger Property="IsEnabled" Value="false">[m
+[31m-                                <Setter Property="Foreground" Value="Gray"/>[m
+[31m-                            </Trigger>[m
+[31m-                        </ControlTemplate.Triggers>[m
+[31m-                    </ControlTemplate>[m
+[31m-                </Setter.Value>[m
+[31m-            </Setter>[m
+[31m-        </Style>[m
+     </Window.Resources>[m
+ [m
+ [m
+[31m-    <Grid RenderTransformOrigin="0.548,0.626" >[m
+[31m-  [m
+[31m-[m
+[32m+[m[32m    <Grid RenderTransformOrigin="0.548,0.626" Height="431" VerticalAlignment="Top" Margin="4,0,0,-1" >[m[41m[m
+         <Grid.RenderTransform>[m
+             <TransformGroup>[m
+                 <ScaleTransform/>[m
+[36m@@ -72,33 +26,15 @@[m
+             </TransformGroup>[m
+         </Grid.RenderTransform>[m
+ [m
+[31m-        <StackPanel>[m
+[31m-[m
+[31m-            <Label x:Name="lblHello">欢迎你光临WPF的世界!</Label>[m
+[31m-[m
+[31m-            <Button Name="btnThd" Click="btnThd_Click" >多线程同步调用</Button>[m
+[31m-[m
+[31m-            <Button Name="btnAppBeginInvoke" Click="btnAppBeginInvoke_Click" >BeginInvoke 异步调用</Button>[m
+[31m-[m
+[31m-        </StackPanel>[m
+[31m-[m
+[31m-        <ListView Height="257"  VerticalAlignment="Bottom" x:Name="listView_Service" HorizontalAlignment="Right" Width="430" Margin="0,0,396,4" RenderTransformOrigin="0.5,0.5">[m
+[31m-            <ListView.RenderTransform>[m
+[31m-                <TransformGroup>[m
+[31m-                    <ScaleTransform/>[m
+[31m-                    <SkewTransform/>[m
+[31m-                    <RotateTransform Angle="-0.044"/>[m
+[31m-                    <TranslateTransform/>[m
+[31m-                </TransformGroup>[m
+[31m-            </ListView.RenderTransform>[m
+[32m+[m[32m        <ListView x:Name="listView_Service" ItemsSource="{Binding}"  HorizontalAlignment="Right" Width="860" Margin="0,-1,2,2" RenderTransformOrigin="0.5,0.5">[m[41m[m
+             <ListView.View>[m
+                 <GridView>[m
+[31m-                    <GridViewColumn Header="服务名称" DisplayMemberBinding="{Binding ServiceName}"  Width="150" />[m
+[32m+[m[32m                    <GridViewColumn Header="服务名称" DisplayMemberBinding="{Binding Path=ServiceName}"  Width="150" />[m[41m[m
+ [m
+                     <GridViewColumn Header="服务状态"  Width="100">[m
+                         <GridViewColumn.CellTemplate>[m
+                             <DataTemplate>[m
+[31m-                                <TextBlock Grid.Column="1" Text="{Binding ServiceStatus}" Foreground="{Binding ServiceStatus, Converter={StaticResource BackgroundConverter}}"/>[m
+[32m+[m[32m                                <TextBlock Grid.Column="1" Text="{Binding Path=ServiceStatus}" Foreground="{Binding ServiceStatus, Converter={StaticResource BackgroundConverter}}"/>[m[41m[m
+                             </DataTemplate>[m
+                         </GridViewColumn.CellTemplate>[m
+                     </GridViewColumn>[m
+[36m@@ -106,7 +42,7 @@[m
+                     <GridViewColumn Header="服务备注" Width="200">[m
+                         <GridViewColumn.CellTemplate>[m
+                             <DataTemplate>[m
+[31m-                                <TextBlock Grid.Column="1" Text="{Binding ServiceMemo}"/>[m
+[32m+[m[32m                                <TextBlock Grid.Column="1" Text="{Binding Path=ServiceMemo}"/>[m[41m[m
+                             </DataTemplate>[m
+                         </GridViewColumn.CellTemplate>[m
+                     </GridViewColumn>[m
+[36m@@ -114,15 +50,15 @@[m
+                     <GridViewColumn Header="操作" Width="120">[m
+                         <GridViewColumn.CellTemplate>[m
+                             <DataTemplate>[m
+[31m-                                <Button Width="90"  Content="{Binding ServiceStatus}"   [m
+[31m-									Click="button_Click" Style="{StaticResource WhiteButton}" />[m
+[32m+[m[32m                                <Button Width="90"  Content="{Binding Path=Operation}"   Click="button_Click" />[m[41m[m
+                             </DataTemplate>[m
+                         </GridViewColumn.CellTemplate>[m
+                     </GridViewColumn>[m
+[32m+[m[41m[m
+                 </GridView>[m
+             </ListView.View>[m
+         </ListView>[m
+[31m-        <Label Content="服务名称" HorizontalAlignment="Left" Margin="15,25,0,0" VerticalAlignment="Top"/>[m
+[32m+[m[41m[m
+     </Grid>[m
+ </Window>[m
+ [m
+[1mdiff --git a/WPFTest/View/MainWindow.xaml.cs b/WPFTest/View/MainWindow.xaml.cs[m
+[1mindex 49811f8..7006554 100644[m
+[1m--- a/WPFTest/View/MainWindow.xaml.cs[m
+[1m+++ b/WPFTest/View/MainWindow.xaml.cs[m
+[36m@@ -1,5 +1,6 @@[m
+ ﻿using Autofac;[m
+ using System;[m
+[32m+[m[32musing System.Collections;[m[41m[m
+ using System.Collections.Generic;[m
+ using System.Data;[m
+ using System.Linq;[m
+[36m@@ -31,37 +32,13 @@[m [mnamespace WPFTest[m
+         public MainWindow()[m
+         {[m
+             InitializeComponent();[m
+[31m-            ////listView.DataContext = GetDataTable();[m
+[31m-            //listView.DataContext = GetDataTable().DefaultView;[m
+[32m+[m[32m            //listView.DataContext = GetDataTable();[m[41m[m
+[32m+[m[32m           // listView.DataContext = GetDataTable().DefaultView;[m[41m[m
+             //listView.SelectedIndex = 0;[m
+             WindowStartupLocation = WindowStartupLocation.CenterScreen;[m
+[31m-[m
+             load();[m
+         }[m
+[31m-        private DataTable GetDataTable()[m
+[31m-        {[m
+[31m-            DataTable data = new DataTable("MyDataTable");[m
+[31m-[m
+[31m-            DataColumn ID = new DataColumn("ID");//第一列[m
+[31m-            ID.DataType = System.Type.GetType("System.Int32");[m
+[31m-            //ID.AutoIncrement = true; //自动递增ID号 [m
+[31m-            data.Columns.Add(ID);[m
+[31m-[m
+[31m-            //设置主键[m
+[31m-            DataColumn[] keys = new DataColumn[1];[m
+[31m-            keys[0] = ID;[m
+[31m-            data.PrimaryKey = keys;[m
+[31m-[m
+[31m-            data.Columns.Add(new DataColumn("Name", typeof(string)));//第二列[m
+[31m-            data.Columns.Add(new DataColumn("Age", typeof(string)));//第三列[m
+[31m-[m
+[31m-            data.Rows.Add(1, "  XiaoM", "  20");[m
+[31m-            data.Rows.Add(2, "  XiaoF", "  122");[m
+[31m-            data.Rows.Add(3, "  XiaoA", "  29");[m
+[31m-            data.Rows.Add(4, "  XiaoB", "  102");[m
+[31m-            return data;[m
+[31m-        }[m
+[31m-[m
+[32m+[m[41m     [m
+         private void load()[m
+         {[m
+             try[m
+[36m@@ -69,7 +46,19 @@[m [mnamespace WPFTest[m
+                 InitializeThinkCRMCo();[m
+                 ApiHost apiHost = new ApiHost();[m
+                 apiHost.StartServices();[m
+[31m-                listView_Service.DataContext = apiHost.DtSericer;[m
+[32m+[m[41m[m
+[32m+[m[32m                DataTable table = apiHost.DtSericer;[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m                DataTable dt = table;[m[41m[m
+[32m+[m[32m                dt.Columns.Add("Operation", typeof(string));[m[41m[m
+[32m+[m[32m                foreach (DataRow dr in dt.Rows)[m[41m[m
+[32m+[m[32m                    dr["Operation"] = dr["ServiceStatus"].ToString()=="运行"? "停止":"启动";[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m                listView_Service.DataContext = apiHost.DtSericer.DefaultView;[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m            //    IEnumerable ar = n[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m              ///  listView_Service.ItemsSource =apiHost.DtSericer;[m[41m[m
+             }[m
+             catch (Exception ex)[m
+             {[m
+[36m@@ -161,62 +150,7 @@[m [mnamespace WPFTest[m
+ [m
+         }[m
+ [m
+[31m-        public string getNmae(string success)[m
+[31m-        {[m
+[31m-            return success;[m
+[31m-        [m
+[31m-        }[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-        private void ModifyUI()[m
+[31m-        {[m
+[31m-[m
+[31m-            // 模拟一些工作正在进行[m
+[31m-[m
+[31m-            Thread.Sleep(TimeSpan.FromSeconds(2));[m
+[31m-[m
+[31m-            //lblHello.Content = "欢迎你光临WPF的世界,Dispatcher";[m
+[31m-[m
+[31m-            this.Dispatcher.Invoke(DispatcherPriority.Normal, (ThreadStart)delegate()[m
+[31m-            {[m
+[31m-[m
+[31m-                lblHello.Content = "欢迎你光临WPF的世界,Dispatche  同步方法 ！！";[m
+[31m-[m
+[31m-            });[m
+[31m-[m
+[31m-        }[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-        private void btnThd_Click(object sender, RoutedEventArgs e)[m
+[31m-        {[m
+[31m-[m
+[31m-            Thread thread = new Thread(ModifyUI);[m
+[31m-[m
+[31m-            thread.Start();[m
+[31m-[m
+[31m-        }[m
+[31m-        private void btnAppBeginInvoke_Click(object sender, RoutedEventArgs e)[m
+[31m-        {[m
+[31m-[m
+[31m-            new Thread(() =>[m
+[31m-            {[m
+[31m-[m
+[31m-                Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal,[m
+[31m-[m
+[31m-                    new Action(() =>[m
+[31m-                    {[m
+ [m
+[31m-                        Thread.Sleep(TimeSpan.FromSeconds(2));[m
+[31m-[m
+[31m-                        this.lblHello.Content = "欢迎你光临WPF的世界,Dispatche 异步方法！！" + DateTime.Now.ToString();[m
+[31m-[m
+[31m-                    }));[m
+[31m-[m
+[31m-            }).Start();[m
+[31m-[m
+[31m-        }[m
+ [m
+     }[m
+ [m
+[1mdiff --git a/WPFTest/ViewModel/ViewConverter/BackgroundConverter.cs b/WPFTest/ViewModel/ViewConverter/BackgroundConverter.cs[m
+[1mindex 2e104f3..11e9a80 100644[m
+[1m--- a/WPFTest/ViewModel/ViewConverter/BackgroundConverter.cs[m
+[1m+++ b/WPFTest/ViewModel/ViewConverter/BackgroundConverter.cs[m
+[36m@@ -1,23 +1,3 @@[m
+[31m-#region Copyright[m
+[31m-/*-----------------------------------------------------------------[m
+[31m- * 文件名（File Name）：          BackgroundConverter.cs[m
+[31m- *[m
+[31m- * 作  者（Author）：             李志勇（John）[m
+[31m- *[m
+[31m- * 日  期（Create Date）：        2017-03-27 17:32:23[m
+[31m- *[m
+[31m- * 公  司（Copyright）：          www.Leapline.com.cn[m
+[31m- * ----------------------------------------------------------------[m
+[31m- * 描  述（Description）：[m
+[31m- * [m
+[31m- * ----------------------------------------------------------------[m
+[31m- * 修改记录（Revision History）[m
+[31m- *      R1 -[m
+[31m- *         修改人（Editor）：[m
+[31m- *         修改日期（Date）：[m
+[31m- *         修改原因（Reason）：[m
+[31m- *----------------------------------------------------------------*/[m
+[31m-#endregion Copyright[m
+ [m
+ using System;[m
+ using System.Collections.Generic;[m
+[1mdiff --git a/WPFTest/ViewModel/ViewConverter/OperationConverter.cs b/WPFTest/ViewModel/ViewConverter/OperationConverter.cs[m
+[1mindex 688c720..33625f6 100644[m
+[1m--- a/WPFTest/ViewModel/ViewConverter/OperationConverter.cs[m
+[1m+++ b/WPFTest/ViewModel/ViewConverter/OperationConverter.cs[m
+[36m@@ -24,7 +24,6 @@[m [mnamespace WPFTest[m
+ [m
+             else[m
+                 result = "关闭";[m
+[31m-[m
+             return result;[m
+         }[m
+ [m
+[1mdiff --git a/WPFTest/WPFTest.csproj b/WPFTest/WPFTest.csproj[m
+[1mindex e0a9f22..7ae80d0 100644[m
+[1m--- a/WPFTest/WPFTest.csproj[m
+[1m+++ b/WPFTest/WPFTest.csproj[m
+[36m@@ -57,6 +57,24 @@[m
+     <Reference Include="log4net">[m
+       <HintPath>..\Reference\log4net.dll</HintPath>[m
+     </Reference>[m
+[32m+[m[32m    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">[m[41m[m
+[32m+[m[32m      <HintPath>..\Reference\EntLib5.0\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>[m[41m[m
+[32m+[m[32m    </Reference>[m[41m[m
+[32m+[m[32m    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">[m[41m[m
+[32m+[m[32m      <HintPath>..\Reference\EntLib5.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>[m[41m[m
+[32m+[m[32m    </Reference>[m[41m[m
+[32m+[m[32m    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">[m[41m[m
+[32m+[m[32m      <HintPath>..\Reference\EntLib5.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>[m[41m[m
+[32m+[m[32m    </Reference>[m[41m

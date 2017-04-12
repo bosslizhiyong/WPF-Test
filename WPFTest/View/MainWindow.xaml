@@ -8,61 +8,15 @@
         xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges"
         mc:Ignorable="d" x:Class="WPFTest.MainWindow"
        
-        Title="AIP服务器" Height="702" Width="839">
+        Title="AIP服务器" Height="461.412" Width="874.215">
 
     <Window.Resources>
         <local:BackgroundConverter  x:Key="BackgroundConverter"/>
         <local:OperationConverter  x:Key="OperationConverter"/>
-        <Style TargetType="{x:Type Button}" x:Key="WhiteButton">
-            <!--设置按钮背景色为透明-->
-            <Setter Property="Background"  Value="{x:Null}"/>
-            <!--设置按钮为无边框样式-->
-            <Setter Property="BorderBrush" Value="{x:Null}"/>
-            <!--设置字体样式-->
-            <Setter Property="FontFamily" Value="华文行楷"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="VerticalAlignment" Value="Top"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
-                            <!--设置一般情况下按钮的形态-->
-                            <Border x:Name="background" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Opacity="0"
-        						Background="{x:Null}" 
-        						BorderBrush="{x:Null}"      
-        						CornerRadius="2"/>
-                            <Grid>
-                                <ContentPresenter  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            </Grid>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <!--当鼠标悬停在按钮上方时，按钮形态设置-->
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Opacity" Value="1" TargetName="background"/>
-                                <Setter Property="Foreground" Value="red"/>
-                                <Setter Property="FontSize" Value="20"/>
-                            </Trigger>
-                            <!--当鼠标按下时，按钮形态设置-->
-                            <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" Value="{x:Null}"/>
-                            </Trigger>
-                            <!--当按钮不可用时，按钮形态设置-->
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Foreground" Value="Gray"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </Window.Resources>
 
 
-    <Grid RenderTransformOrigin="0.548,0.626" >
-  
-
+    <Grid RenderTransformOrigin="0.548,0.626" Height="431" VerticalAlignment="Top" Margin="4,0,0,-1" >
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -72,33 +26,15 @@
             </TransformGroup>
         </Grid.RenderTransform>
 
-        <StackPanel>
-
-            <Label x:Name="lblHello">欢迎你光临WPF的世界!</Label>
-
-            <Button Name="btnThd" Click="btnThd_Click" >多线程同步调用</Button>
-
-            <Button Name="btnAppBeginInvoke" Click="btnAppBeginInvoke_Click" >BeginInvoke 异步调用</Button>
-
-        </StackPanel>
-
-        <ListView Height="257"  VerticalAlignment="Bottom" x:Name="listView_Service" HorizontalAlignment="Right" Width="430" Margin="0,0,396,4" RenderTransformOrigin="0.5,0.5">
-            <ListView.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.044"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ListView.RenderTransform>
+        <ListView x:Name="listView_Service" ItemsSource="{Binding}"  HorizontalAlignment="Right" Width="860" Margin="0,-1,2,2" RenderTransformOrigin="0.5,0.5">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="服务名称" DisplayMemberBinding="{Binding ServiceName}"  Width="150" />
+                    <GridViewColumn Header="服务名称" DisplayMemberBinding="{Binding Path=ServiceName}"  Width="150" />
 
                     <GridViewColumn Header="服务状态"  Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Grid.Column="1" Text="{Binding ServiceStatus}" Foreground="{Binding ServiceStatus, Converter={StaticResource BackgroundConverter}}"/>
+                                <TextBlock Grid.Column="1" Text="{Binding Path=ServiceStatus}" Foreground="{Binding ServiceStatus, Converter={StaticResource BackgroundConverter}}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -106,7 +42,7 @@
                     <GridViewColumn Header="服务备注" Width="200">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Grid.Column="1" Text="{Binding ServiceMemo}"/>
+                                <TextBlock Grid.Column="1" Text="{Binding Path=ServiceMemo}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -114,15 +50,15 @@
                     <GridViewColumn Header="操作" Width="120">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Width="90"  Content="{Binding ServiceStatus}"   
-									Click="button_Click" Style="{StaticResource WhiteButton}" />
+                                <Button Width="90"  Content="{Binding Path=Operation}"   Click="button_Click" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="服务名称" HorizontalAlignment="Left" Margin="15,25,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
 

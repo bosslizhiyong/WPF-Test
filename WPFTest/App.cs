@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +25,6 @@ namespace WPFTest
        static void app_Exit(object sender, ExitEventArgs e)
        {
           MessageBox.Show(""+e.ApplicationExitCode);//  e.ApplicationExitCode
-
        }
 
     }
