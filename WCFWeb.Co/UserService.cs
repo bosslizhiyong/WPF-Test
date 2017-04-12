@@ -86,8 +86,6 @@ namespace WCFWeb.Co
             DataTable dt = new DataTable(); //新建表对象
             da.Fill(dt); //用适配对象填充表对象
             conn.Close();
-
-
             return "";
         }
 
