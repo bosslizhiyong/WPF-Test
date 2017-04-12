@@ -18,10 +18,9 @@ namespace WPFTest
             string status = value.ToString();
             if (status == "失败")
                 result = "启动";
-
             else if (status == "运行")
-                result = "关闭";
 
+                result = "关闭";
             else
                 result = "关闭";
             return result;

@@ -15,7 +15,6 @@ namespace WPFTest
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             Color color = new Color();
-           // int num = int.Parse(value.ToString());
             string status = value.ToString();
             if (status == "失败")
                 color = Colors.Yellow;
@@ -24,9 +23,6 @@ namespace WPFTest
             else
                 color = Colors.LightPink;
             return new SolidColorBrush(color);
-
-
-           //测试
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
