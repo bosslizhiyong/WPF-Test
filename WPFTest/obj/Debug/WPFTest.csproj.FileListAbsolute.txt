@@ -50,3 +50,5 @@ D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.Unity.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\Microsoft.Practices.Unity.Interception.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\ThinkCRM.Infrastructure.DataEntity.Co.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\ThinkCRM.Infrastructure.DataEntity.Co.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\ThinkCRM.Infrastructure.Persistence.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WPFTest\bin\Debug\ThinkCRM.Infrastructure.Persistence.Co.pdb

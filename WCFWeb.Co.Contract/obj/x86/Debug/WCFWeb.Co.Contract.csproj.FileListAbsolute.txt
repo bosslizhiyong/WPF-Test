@@ -29,3 +29,7 @@ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\bin\x86\Debug\ThinkNet.Utilit
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\obj\x86\Debug\WCFWeb.Co.Contract.csprojResolveAssemblyReference.cache
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\obj\x86\Debug\WCFWeb.Api.Co.Contract.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\obj\x86\Debug\WCFWeb.Api.Co.Contract.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\bin\x86\Debug\ThinkCRM.Infrastructure.Persistence.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\bin\x86\Debug\ThinkCRM.Infrastructure.Persistence.Co.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co.Contract\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.pdb

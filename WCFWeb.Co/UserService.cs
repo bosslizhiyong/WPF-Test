@@ -66,7 +66,7 @@ namespace WCFWeb.Co
             DataTable table = QueryService.ExecuteDataTable(strSql);
 
             //
-            //var c = QueryService.GetTable<CM_Module>(_mQueryParamater);
+            var c = QueryService.GetTable<CM_Module>(_mQueryParamater);
 
 
             return null;

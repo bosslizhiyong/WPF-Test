@@ -85,7 +85,8 @@ namespace WPFTest
                 //Assembly.Load("ThinkCRM.Commands.Co"),
                 //Assembly.Load("ThinkCRM.CommandExecutors.Co"),
                 Assembly.Load("WCFWeb.Query.Co"),
-              //  Assembly.Load("WCFWeb.Infrastructure.Persistence.Co"),
+              
+                Assembly.Load("ThinkCRM.Infrastructure.Persistence.Co"),
                 //Assembly.Load("ThinkCRM.Domain.Co"),
               //  Assembly.Load("ThinkCRM.Infrastructure.Repository.Co")
             };

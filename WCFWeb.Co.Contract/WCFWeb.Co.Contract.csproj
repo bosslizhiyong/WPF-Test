@@ -82,6 +82,12 @@
   <ItemGroup>
     <Folder Include="Text\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\ThinkCRM.Infrastructure.Persistence.Co\ThinkCRM.Infrastructure.Persistence.Co.csproj">
+      <Project>{0ce3a5ed-0760-4952-8a90-6e8ca9b378e9}</Project>
+      <Name>ThinkCRM.Infrastructure.Persistence.Co</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
