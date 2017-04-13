@@ -436,8 +436,6 @@ namespace WCFWeb.Co
             return DataTypeConvert.ToDateTime("1900/1/1 0:00:00", DTFormate.SHORT_EN_US);
         }
 
-
-
         public bool IsEnterprise(int cid)
         {
             if (cid == -1)
@@ -446,10 +444,8 @@ namespace WCFWeb.Co
             }
             return true;
         }
-
-
-
-
+       
+        /// <summary>
         /// 小数转换
         /// </summary>
         /// <param name="number"></param>
@@ -507,8 +503,6 @@ namespace WCFWeb.Co
             return 0;
         }
 
-
-
         /// <summary>
         /// 解密码
         /// </summary>
@@ -525,7 +519,6 @@ namespace WCFWeb.Co
                 WriteExceptionLog(ex);
                 return "";
             }
-
         }
     }
 }

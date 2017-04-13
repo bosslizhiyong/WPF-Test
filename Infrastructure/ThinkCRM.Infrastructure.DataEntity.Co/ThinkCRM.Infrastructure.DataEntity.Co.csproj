@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5CCF728-148A-4F77-A81D-DEC279C995B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThinkCRM.Infrastructure.DataEntity.Co</RootNamespace>
+    <AssemblyName>ThinkCRM.Infrastructure.DataEntity.Co</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThinkNet">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.Autofac">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.AutoUpdate">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.AutoUpdate.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.Component">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Component.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.Utility">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataEntity\Common\CM_Account.cs" />
+    <Compile Include="DataEntity\Common\CM_Application.cs" />
+    <Compile Include="DataEntity\Common\CM_Bank.cs" />
+    <Compile Include="DataEntity\Common\CM_Country.cs" />
+    <Compile Include="DataEntity\Common\CM_Currency.cs" />
+    <Compile Include="DataEntity\Common\CM_Database.cs" />
+    <Compile Include="DataEntity\Common\CM_DepartmentRole_Ref.cs" />
+    <Compile Include="DataEntity\Common\CM_DownloadFile.cs" />
+    <Compile Include="DataEntity\Common\CM_ExportTemplate.cs" />
+    <Compile Include="DataEntity\Common\CM_Functions.cs" />
+    <Compile Include="DataEntity\Common\CM_Individualize.cs" />
+    <Compile Include="DataEntity\Common\CM_IndividualizeLine.cs" />
+    <Compile Include="DataEntity\Common\CM_Module.cs" />
+    <Compile Include="DataEntity\Common\CM_ModuleFunction_Ref.cs" />
+    <Compile Include="DataEntity\Common\CM_Nation.cs" />
+    <Compile Include="DataEntity\Common\CM_OperationLog.cs" />
+    <Compile Include="DataEntity\Common\CM_Parameter.cs" />
+    <Compile Include="DataEntity\Common\CM_PrintNumber.cs" />
+    <Compile Include="DataEntity\Common\CM_PrintTemplate.cs" />
+    <Compile Include="DataEntity\Common\CM_PushLog.cs" />
+    <Compile Include="DataEntity\Common\CM_Region.cs" />
+    <Compile Include="DataEntity\Common\CM_RoleModuleFunction_Ref.cs" />
+    <Compile Include="DataEntity\Common\CM_RoleModule_Ref.cs" />
+    <Compile Include="DataEntity\Common\CM_Roles.cs" />
+    <Compile Include="DataEntity\Common\CM_Sequence.cs" />
+    <Compile Include="DataEntity\Common\CM_Tags.cs" />
+    <Compile Include="DataEntity\Common\CM_Thread.cs" />
+    <Compile Include="DataEntity\Common\CM_UploadFile.cs" />
+    <Compile Include="DataEntity\Common\CM_User.cs" />
+    <Compile Include="DataEntity\Common\CM_UserRole_Ref.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

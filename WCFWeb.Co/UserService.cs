@@ -5,6 +5,7 @@ using ThinkNet.Infrastructure.Core;
 using ThinkNet.Utility;
 using System.Data;
 using System.Data.OleDb;
+using ThinkCRM.Infrastructure.DataEntity.Co;
 
 namespace WCFWeb.Co
 {
@@ -59,18 +60,19 @@ namespace WCFWeb.Co
             return t;
         }
 
-
-
         public string GetTest()
         {
             string strSql = " SELECT * FROM CO_ProductCategory WHERE [Status] = 0 ";
             DataTable table = QueryService.ExecuteDataTable(strSql);
+
+            //
+            //var c = QueryService.GetTable<CM_Module>(_mQueryParamater);
+
+
             return null;
         }
 
-
         static string exePath = System.Environment.CurrentDirectory;//本程序所在路径
-
 
         public string GetAccess()
         {
@@ -89,14 +91,14 @@ namespace WCFWeb.Co
             return "";
         }
 
-        public string GetAccessTable() 
+        public string GetAccessTable()
         {
-            string strConn =string.Format("provider=Microsoft.Jet.OLEDB.4.0;Data Source= {0}"+ @"\ThinkCRMCo4Developer.mdb");
+            string strConn = string.Format("provider=Microsoft.Jet.OLEDB.4.0;Data Source= {0}" + @"\ThinkCRMCo4Developer.mdb");
             OleDBHelper olr = new OleDBHelper("");
 
 
             return "";
-          //  olr.ExecuteTable()
+            //  olr.ExecuteTable()
         }
 
 

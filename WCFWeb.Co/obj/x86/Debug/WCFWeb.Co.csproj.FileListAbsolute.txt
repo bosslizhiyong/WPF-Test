@@ -44,3 +44,6 @@ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Ente
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Unity.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.pdb

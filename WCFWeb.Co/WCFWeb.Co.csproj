@@ -48,6 +48,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
@@ -79,6 +80,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\ThinkCRM.Infrastructure.DataEntity.Co.csproj">
+      <Project>{f5ccf728-148a-4f77-a81d-dec279c995b8}</Project>
+      <Name>ThinkCRM.Infrastructure.DataEntity.Co</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WCFWeb.Co.Contract\WCFWeb.Co.Contract.csproj">
       <Project>{055c0983-576a-4be1-9feb-69537ac96eb5}</Project>
       <Name>WCFWeb.Co.Contract</Name>

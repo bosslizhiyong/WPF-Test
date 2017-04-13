@@ -190,7 +190,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Command\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

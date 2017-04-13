@@ -87,7 +87,7 @@ namespace WPFTest
                 Assembly.Load("WCFWeb.Query.Co"),
               //  Assembly.Load("WCFWeb.Infrastructure.Persistence.Co"),
                 //Assembly.Load("ThinkCRM.Domain.Co"),
-                //Assembly.Load("ThinkCRM.Infrastructure.Repository.Co")
+              //  Assembly.Load("ThinkCRM.Infrastructure.Repository.Co")
             };
 
             var container = (ObjectContainer.Current as AutofacObjectContainer).Container;
