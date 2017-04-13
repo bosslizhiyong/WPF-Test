@@ -1,0 +1,52 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Debug="False" ResponseEncoding="UTF-8" Description="Creates a simplistic entity object." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the stored procedures should be based on." %>
+<%@ Property Name="NameSpace" Type="String" Category="Context" Default=""   Optional="True"  %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+// 作者：汪洪斌
+// 日期：<%= DateTime.Now.ToString()%>
+using System;
+using ThinkNet.Persistence.Core;
+using ThinkCRM.Infrastructure.DataEntity<%=NameSpace%>;
+
+namespace ThinkCRM.Infrastructure.Persistence<%=NameSpace%>
+{
+	/// <summary>
+	/// <%=SourceTable.Name%> 数据库操作类
+	/// </summary>
+	public class <%= SourceTable.Name %>DAO:<%=GetBaseDalTname(SourceTable)%>
+	{
+		#region 字    段
+		
+		#endregion
+		
+		#region 属    性
+		
+		#endregion
+		
+		#region 构造函数
+		/// <summary>
+		/// <%=SourceTable.Name%> 数据库操作类
+		/// </summary>
+		public <%= SourceTable.Name %>DAO()
+		{
+		}
+		#endregion
+		
+		#region 基本方法
+		
+		#endregion
+		
+		#region 其他方法
+		
+		#endregion
+	}
+}
+
+<script runat="template">
+public string GetBaseDalTname(TableSchema table)
+{
+	string name = "SQLDAOBase<"+table.Name +">";
+	return name;
+} 
+</script> 

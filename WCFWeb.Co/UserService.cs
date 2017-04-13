@@ -67,11 +67,10 @@ namespace WCFWeb.Co
 
             //
             var c = QueryService.GetTable<CM_Module>(_mQueryParamater);
-
-
             return null;
         }
 
+       
         static string exePath = System.Environment.CurrentDirectory;//本程序所在路径
 
         public string GetAccess()

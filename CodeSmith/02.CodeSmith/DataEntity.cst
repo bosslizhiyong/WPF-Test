@@ -1,0 +1,168 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Debug="False" ResponseEncoding="UTF-8" Description="Creates a simplistic entity object." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the stored procedures should be based on." %>
+<%@ Property Name="NameSpace" Type="String" Category="Context" Default=""   Optional="True"   %>
+<%@ Property Name="ConnName" Type="ConnNameEnum" Category="Collection"  %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+// 作者：汪洪斌
+// 日期：<%= DateTime.Now.ToString()%>
+using System;
+using System.ComponentModel;
+using ThinkNet.DataEntity.Core;
+
+namespace ThinkCRM.Infrastructure.DataEntity<%=NameSpace%>
+{
+	/// <summary>
+	/// <%=SourceTable.Description%>
+	/// </summary>
+    [System.Runtime.Serialization.DataContract]
+	public class <%= SourceTable.Name %>:DataEntityBase
+	{
+		#region 字    段
+		<% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+		/// <summary>
+        /// <%= SourceTable.Columns[i].Description %>
+        /// </summary>
+		private <%= GetCSharpVariableType(SourceTable.Columns[i]) %> _<%= SourceTable.Columns[i].Name %><%= GetCSharpVariableTypeValue(SourceTable.Columns[i]) %>;
+		<% } %>
+		#endregion
+		
+		#region 属    性
+		<% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+		/// <summary>
+        /// <%= SourceTable.Columns[i].Description %>
+        /// </summary>
+		[System.Runtime.Serialization.DataMember,DisplayName("<%= GetDisplayName(SourceTable.Columns[i]) %>")]
+		public <%= GetCSharpVariableType(SourceTable.Columns[i]) %> <%= SourceTable.Columns[i].Name %>
+		{
+			get {return this._<%= SourceTable.Columns[i].Name %>;}
+			set {this._<%= SourceTable.Columns[i].Name %> = value;}
+		}
+		<% } %>
+		#endregion
+		
+		#region 构造函数
+		/// <summary>
+		/// <%=SourceTable.Description%>
+		/// </summary>
+		public <%= SourceTable.Name %>()
+		{
+			PrimaryKey = "<%= SourceTable.Columns[0].Name %>";
+            ConnectionStringsName = ConnectionStrings.<%=ConnName%>;
+            IsAutoID = true;
+		}
+		#endregion
+		
+		#region 其他属性
+        public override object KeyID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                _ID = (int)value;
+            }
+        }
+        #endregion
+	}
+}
+
+<script runat="template">
+public enum ConnNameEnum  
+{  
+    ConnCRM,  
+    ConnQueryCRM,  
+    ConnCRMCo,
+	ConnQueryCRMCo
+}
+
+public string GetCSharpVariableType(ColumnSchema column)
+{
+    if (column.Name.EndsWith("TypeCode")) return column.Name;
+    switch (column.DataType)
+    {
+        case DbType.AnsiString: return "string";
+        case DbType.AnsiStringFixedLength: return "string";
+        case DbType.Binary: return "byte[]";
+        case DbType.Boolean: return "bool";
+        case DbType.Byte: return "byte";
+        case DbType.Currency: return "decimal";
+        case DbType.Date: return "DateTime";
+        case DbType.DateTime: return "DateTime";
+        case DbType.Decimal: return "decimal";
+        case DbType.Double: return "double";
+        case DbType.Guid: return "Guid";
+        case DbType.Int16: return "short";
+        case DbType.Int32: return "int";
+        case DbType.Int64: return "long";
+        case DbType.Object: return "object";
+        case DbType.SByte: return "sbyte";
+        case DbType.Single: return "float";
+        case DbType.String: return "string";
+        case DbType.StringFixedLength: return "string";
+        case DbType.Time: return "TimeSpan";
+        case DbType.UInt16: return "ushort";
+        case DbType.UInt32: return "uint";
+        case DbType.UInt64: return "ulong";
+        case DbType.VarNumeric: return "decimal";
+        default:
+        {
+            return "__UNKNOWN__" + column.NativeType;
+        }
+    }
+}
+
+public string GetCSharpVariableTypeValue(ColumnSchema column)
+{
+    if (column.Name.EndsWith("TypeCode")) return column.Name;
+    switch (column.DataType)
+    {
+        case DbType.AnsiString: return "=\"\"";
+        case DbType.AnsiStringFixedLength: return "=\"\"";
+        case DbType.Binary: return "";
+        case DbType.Boolean: return "";
+        case DbType.Byte: return "";
+        case DbType.Currency: return "=0";
+        case DbType.Date: return "=DateTime.Now";
+        case DbType.DateTime: return "=DateTime.Now";
+        case DbType.Decimal: return "=0";
+        case DbType.Double: return "=0";
+        case DbType.Guid: return "";
+        case DbType.Int16: return "=0";
+        case DbType.Int32: return "=0";
+        case DbType.Int64: return "=0";
+        case DbType.Object: return "";
+        case DbType.SByte: return "";
+        case DbType.Single: return "=0";
+        case DbType.String: return "=\"\"";
+        case DbType.StringFixedLength: return "=\"\"";
+        case DbType.Time: return "";
+        case DbType.UInt16: return "=0";
+        case DbType.UInt32: return "=0";
+        case DbType.UInt64: return "=0";
+        case DbType.VarNumeric: return "=0";
+        default:
+        {
+            return "";
+        }
+    }
+}
+
+public string GetDisplayName(ColumnSchema column)
+{
+    string desc=column.Description;
+    if(desc!="")
+    {
+        desc=desc.Replace("（","(");
+        int l=desc.IndexOf('(');
+        if(l>0)
+        {
+            desc=desc.Substring(0,desc.IndexOf('('));
+        }
+    }
+    return desc;
+}
+</script> 
+
