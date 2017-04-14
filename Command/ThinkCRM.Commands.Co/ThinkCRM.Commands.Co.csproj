@@ -37,9 +37,31 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="ThinkNet">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.Autofac">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.AutoUpdate">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.AutoUpdate.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.Component">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Component.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.Utility">
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Account\AddAccountCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\ThinkCRM.Infrastructure.DataEntity.Co.csproj">
+      <Project>{f5ccf728-148a-4f77-a81d-dec279c995b8}</Project>
+      <Name>ThinkCRM.Infrastructure.DataEntity.Co</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
