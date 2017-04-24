@@ -175,6 +175,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -182,6 +185,14 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Command\ThinkCRM.CommandExecutors.Co\ThinkCRM.CommandExecutors.Co.csproj">
+      <Project>{45082a80-6a9e-4a35-90d3-dd955bc0350e}</Project>
+      <Name>ThinkCRM.CommandExecutors.Co</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Command\ThinkCRM.Commands.Co\ThinkCRM.Commands.Co.csproj">
+      <Project>{56fbbfca-d173-473c-8b0b-c91e41b7ba5a}</Project>
+      <Name>ThinkCRM.Commands.Co</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\ThinkCRM.Infrastructure.Persistence.Co\ThinkCRM.Infrastructure.Persistence.Co.csproj">
       <Project>{0ce3a5ed-0760-4952-8a90-6e8ca9b378e9}</Project>
       <Name>ThinkCRM.Infrastructure.Persistence.Co</Name>
@@ -239,6 +250,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

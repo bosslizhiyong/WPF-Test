@@ -6,6 +6,10 @@ using ThinkNet.Utility;
 using System.Data;
 using System.Data.OleDb;
 using ThinkCRM.Infrastructure.DataEntity.Co;
+using ThinkCRM.Commands.Co;
+using ThinkNet.Query.Core;
+using System.Collections;
+using System;
 
 namespace WCFWeb.Co
 {
@@ -60,8 +64,18 @@ namespace WCFWeb.Co
             return t;
         }
 
+        
         public string GetTest()
         {
+            try
+            {
+                int i = 0;
+                int s = 60 / i;
+            }
+            catch (Exception ex)
+            {
+                WriteExceptionLog(ex.Message);
+            }
             string strSql = " SELECT * FROM CO_ProductCategory WHERE [Status] = 0 ";
             DataTable table = QueryService.ExecuteDataTable(strSql);
 
@@ -70,7 +84,35 @@ namespace WCFWeb.Co
             return null;
         }
 
-       
+        public string AddTest()
+        {
+            CM_Account dataEntity = new CM_Account();
+            dataEntity.AccountCode = "asdfsd";
+            dataEntity.CreateTime = DateTime.Now;
+
+            AddAccountCommand cmd = new AddAccountCommand(dataEntity);
+             CommandBus.Send<AddAccountCommand>(cmd);
+            if (cmd.SimpleResult != null)
+            {
+              //  BusinessID = DataTypeConvert.ToInt32(cmd.SimpleResult.Message);
+            }
+            return "";
+        }
+
+        public string UpdateTest()
+        {
+            _mQueryParamater =QueryParamater.Create(" 1 = 1  ID = 8");
+            IEnumerable<CM_Account> account = QueryService.GetList<CM_Account>(_mQueryParamater);
+            return "";
+        }
+
+        public string DeleteTest()
+        {
+
+
+            return "";
+        }
+
         static string exePath = System.Environment.CurrentDirectory;//本程序所在路径
 
         public string GetAccess()

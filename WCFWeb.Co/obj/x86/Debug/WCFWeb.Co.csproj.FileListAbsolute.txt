@@ -47,3 +47,7 @@ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.Practices.Unit
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.CommandExecutors.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.Commands.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.CommandExecutors.Co.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Co\bin\x86\Debug\ThinkCRM.Commands.Co.pdb

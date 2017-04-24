@@ -15,3 +15,4 @@ D:\TestWCF\ThinkVersions\WCFWeb\Infrastructure\ThinkCRM.Infrastructure.Persisten
 D:\TestWCF\ThinkVersions\WCFWeb\Infrastructure\ThinkCRM.Infrastructure.Persistence.Co\bin\Debug\ThinkNet.Utility.xml
 D:\TestWCF\ThinkVersions\WCFWeb\Infrastructure\ThinkCRM.Infrastructure.Persistence.Co\obj\Debug\ThinkCRM.Infrastructure.Persistence.Co.dll
 D:\TestWCF\ThinkVersions\WCFWeb\Infrastructure\ThinkCRM.Infrastructure.Persistence.Co\obj\Debug\ThinkCRM.Infrastructure.Persistence.Co.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\Infrastructure\ThinkCRM.Infrastructure.Persistence.Co\obj\Debug\ThinkCRM.Infrastructure.Persistence.Co.csprojResolveAssemblyReference.cache

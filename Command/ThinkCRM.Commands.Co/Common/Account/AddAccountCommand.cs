@@ -1,5 +1,6 @@
 ﻿using ThinkCRM.Infrastructure.DataEntity.Co;
 using ThinkNet.Command.Core;
+using ThinkNet.DataEntity.Core;
 
 namespace ThinkCRM.Commands.Co
 {

@@ -1,0 +1,13 @@
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\ThinkNet.Utility.xml
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\ThinkNet.Utility.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\ThinkNet.Utility.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\log4net.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\MySql.Data.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\Newtonsoft.Json.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\bin\Debug\System.Data.SQLite.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\obj\Debug\ThinkNet.Utility.csprojResolveAssemblyReference.cache
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\obj\Debug\ThinkNet.Utility.FrmSplash.resources
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\obj\Debug\ThinkNet.Utility.csproj.GenerateResource.Cache
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\obj\Debug\ThinkNet.Utility.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\ThinkNet.Utility\obj\Debug\ThinkNet.Utility.pdb

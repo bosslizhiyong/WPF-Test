@@ -9,41 +9,6 @@
             高级加密标准,又称Rijndael加密法
             </summary>
         </member>
-        <member name="T:ThinkNet.Utility.ICrypto">
-            <summary>
-            加密接口
-            </summary>
-        </member>
-        <member name="M:ThinkNet.Utility.ICrypto.Encrypt(System.String)">
-            <summary>
-            加密
-            </summary>
-            <param name="plainText">明文</param>
-            <returns></returns>
-        </member>
-        <member name="M:ThinkNet.Utility.ICrypto.Encrypt(System.String,System.String)">
-            <summary>
-            加密
-            </summary>
-            <param name="plainText">明文</param>
-            <param name="encryptKey">加密密钥</param>
-            <returns></returns>
-        </member>
-        <member name="M:ThinkNet.Utility.ICrypto.Decrypt(System.String)">
-            <summary>
-            解密
-            </summary>
-            <param name="cryptoText">密文</param>
-            <returns></returns>
-        </member>
-        <member name="M:ThinkNet.Utility.ICrypto.Decrypt(System.String,System.String)">
-            <summary>
-            解密
-            </summary>
-            <param name="cryptoText">密文</param>
-            <param name="decryptKey">解密密钥</param>
-            <returns></returns>
-        </member>
         <member name="M:ThinkNet.Utility.AES.#ctor">
             <summary>
             构造函数
@@ -213,6 +178,41 @@
             <summary>
             RC2
             </summary>
+        </member>
+        <member name="T:ThinkNet.Utility.ICrypto">
+            <summary>
+            加密接口
+            </summary>
+        </member>
+        <member name="M:ThinkNet.Utility.ICrypto.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="plainText">明文</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.Utility.ICrypto.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="plainText">明文</param>
+            <param name="encryptKey">加密密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.Utility.ICrypto.Decrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="cryptoText">密文</param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.Utility.ICrypto.Decrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="cryptoText">密文</param>
+            <param name="decryptKey">解密密钥</param>
+            <returns></returns>
         </member>
         <member name="T:ThinkNet.Utility.MD5">
             <summary>
@@ -1584,7 +1584,16 @@
             <summary>
             获取枚举项的描述
             </summary>
-            <param name="enmItem">要返回描述的枚举项</param>
+            <param name="enumType"></param>
+            <param name="enumValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.Utility.EnumHelper.GetEnumItemDesc(System.Type,System.String)">
+            <summary>
+            获取枚举项的描述
+            </summary>
+            <param name="enumType"></param>
+            <param name="enumName"></param>
             <returns></returns>
         </member>
         <member name="M:ThinkNet.Utility.EnumHelper.GetEnumValueByDescription(System.Type,System.String)">
@@ -1595,14 +1604,12 @@
             <param name="description">描述</param>
             <returns></returns>
         </member>
-        <member name="M:ThinkNet.Utility.EnumHelper.GetEnumItemDesc(System.Enum)">
+        <member name="M:ThinkNet.Utility.EnumHelper.GetAllEnumItemDesc(System.Type)">
             <summary>
             获取枚举项的描述
             </summary>
             <param name="enmItem">要返回描述的枚举项</param>
             <returns></returns>
-        </member>
-        <member name="M:ThinkNet.Utility.EnumHelper.GetAllEnumItemDesc(System.Type)">
             <summary>
             获取所有枚举项的描述
             </summary>
@@ -2050,7 +2057,7 @@
             <param name="dt"></param>
             <returns></returns>
         </member>
-        <!-- 对于成员“M:ThinkNet.Utility.JSonHelper.JsonToTable(System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:ThinkNet.Utility.JSonHelper.JsonToTable(System.String)" -->
         <member name="M:ThinkNet.Utility.JSonHelper.Serialize(System.Object)">
             <summary>
             把对象转换为JSON
@@ -2094,13 +2101,6 @@
             通用JSon类描述
             </summary>
         </member>
-        <member name="M:ThinkNet.Utility.JSonItem.CompareTo(System.Object)">
-            <summary>
-            排序
-            </summary>
-            <param name="obj"></param>
-            <returns></returns>
-        </member>
         <member name="P:ThinkNet.Utility.JSonItem.ID">
             <summary>
             
@@ -2131,6 +2131,13 @@
             
             </summary>
         </member>
+        <member name="M:ThinkNet.Utility.JSonItem.CompareTo(System.Object)">
+            <summary>
+            排序
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
         <member name="T:ThinkNet.Utility.LogManager">
             <summary>
             日志操作类
@@ -2155,6 +2162,13 @@
             <summary>
             获得公司Host信息
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThinkNet.Utility.HostService.GetCompanyAll(System.Collections.Generic.List{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="companyIds"></param>
             <returns></returns>
         </member>
         <member name="M:ThinkNet.Utility.HostService.GetHostInfo(System.String,System.Int32)">
@@ -2894,19 +2908,6 @@
             正则表达式项
             </summary>
         </member>
-        <member name="M:ThinkNet.Utility.RegexItem.#ctor">
-            <summary>
-            构造函数
-            </summary>
-        </member>
-        <member name="M:ThinkNet.Utility.RegexItem.#ctor(System.String,System.String,System.String)">
-            <summary>
-            构造函数
-            </summary>
-            <param name="regex">正则表达式</param>
-            <param name="description">描述</param>
-            <param name="errorDesc">错误描述</param>
-        </member>
         <member name="P:ThinkNet.Utility.RegexItem.Regex">
             <summary>
             正则表达式
@@ -2922,6 +2923,19 @@
             错误描述
             </summary>
         </member>
+        <member name="M:ThinkNet.Utility.RegexItem.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:ThinkNet.Utility.RegexItem.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="regex">正则表达式</param>
+            <param name="description">描述</param>
+            <param name="errorDesc">错误描述</param>
+        </member>
         <member name="T:ThinkNet.Utility.RegexRule">
             <summary>
             通用正则表达式规则
@@ -2936,17 +2950,6 @@
             <summary>
             闪动窗口，继承ISplashUI接口,
             </summary>
-        </member>
-        <member name="T:ThinkNet.Utility.ISplashUI">
-            <summary>
-            闪动窗口接口
-            </summary>
-        </member>
-        <member name="M:ThinkNet.Utility.ISplashUI.SetInformation(System.String)">
-            <summary>
-            设置信息
-            </summary>
-            <param name="info"></param>
         </member>
         <member name="M:ThinkNet.Utility.FrmSplash.#ctor">
             <summary>
@@ -2970,6 +2973,17 @@
             使用代码编辑器修改此方法的内容。
             </summary>
         </member>
+        <member name="T:ThinkNet.Utility.ISplashUI">
+            <summary>
+            闪动窗口接口
+            </summary>
+        </member>
+        <member name="M:ThinkNet.Utility.ISplashUI.SetInformation(System.String)">
+            <summary>
+            设置信息
+            </summary>
+            <param name="info"></param>
+        </member>
         <member name="T:ThinkNet.Utility.Splasher">
             <summary>
             Splasher类，可以显示、关闭闪动屏幕及设置动态信息
@@ -2981,6 +2995,11 @@
             </summary>
             <param name="splashFormType">闪动窗口画面(继承ISplashUI接口)的类型</param>
         </member>
+        <member name="P:ThinkNet.Utility.Splasher.Information">
+            <summary>
+            状态属性，设置动态信息
+            </summary>
+        </member>
         <member name="M:ThinkNet.Utility.Splasher.Close">
             <summary>
             关闭闪动窗口画面
@@ -2991,11 +3010,6 @@
             创建闪动窗口实例
             </summary>
             <param name="formType"></param>
-        </member>
-        <member name="P:ThinkNet.Utility.Splasher.Information">
-            <summary>
-            状态属性，设置动态信息
-            </summary>
         </member>
         <member name="T:ThinkNet.Utility.ValidateCode">
              <summary>

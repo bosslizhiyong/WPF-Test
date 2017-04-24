@@ -70,3 +70,7 @@ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\bin\x86\Debug\ThinkNet.AutoUpdate.xml
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\bin\x86\Debug\ThinkNet.Component.xml
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\bin\x86\Debug\ThinkNet.Utility.xml
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\obj\x86\Debug\WCFWeb.Co.ApiHost.csprojResolveAssemblyReference.cache
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\bin\x86\Debug\ThinkCRM.Commands.Co.dll
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\bin\x86\Debug\ThinkCRM.Infrastructure.DataEntity.Co.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb\bin\x86\Debug\ThinkCRM.Commands.Co.pdb

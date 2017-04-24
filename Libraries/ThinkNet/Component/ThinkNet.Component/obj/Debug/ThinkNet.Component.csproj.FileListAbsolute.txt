@@ -1,0 +1,8 @@
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\bin\Debug\ThinkNet.Component.xml
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\bin\Debug\ThinkNet.Component.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\bin\Debug\ThinkNet.Component.pdb
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\bin\Debug\log4net.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\bin\Debug\Newtonsoft.Json.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\obj\Debug\ThinkNet.Component.csprojResolveAssemblyReference.cache
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\obj\Debug\ThinkNet.Component.dll
+D:\TestWCF\ThinkVersions\WCFWeb\Libraries\ThinkNet\Component\ThinkNet.Component\obj\Debug\ThinkNet.Component.pdb

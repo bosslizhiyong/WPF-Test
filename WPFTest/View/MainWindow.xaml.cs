@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Reflection;
@@ -19,8 +20,10 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using ThinkNet.Autofac;
 using ThinkNet.Component;
+using ThinkNet.Query.Core;
 using WCFWeb.Co.ApiHost;
 using WCFWeb.Infrastructure.Co;
+
 
 namespace WPFTest
 {
@@ -33,12 +36,12 @@ namespace WPFTest
         {
             InitializeComponent();
             //listView.DataContext = GetDataTable();
-           // listView.DataContext = GetDataTable().DefaultView;
+            // listView.DataContext = GetDataTable().DefaultView;
             //listView.SelectedIndex = 0;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             load();
         }
-     
+
         private void load()
         {
             try
@@ -52,7 +55,7 @@ namespace WPFTest
                 DataTable dt = table;
                 dt.Columns.Add("Operation", typeof(string));
                 foreach (DataRow dr in dt.Rows)
-                    dr["Operation"] = dr["ServiceStatus"].ToString()=="运行"? "停止":"启动";
+                    dr["Operation"] = dr["ServiceStatus"].ToString() == "运行" ? "停止" : "启动";
 
                 listView_Service.DataContext = apiHost.DtSericer.DefaultView;
 
@@ -68,7 +71,7 @@ namespace WPFTest
             //初始系统变量
             ConfigSettings.Initialize();
             //系统组件(Autofac,log4net,Newtonsoft.Json)
-            Configuration
+            ThinkNet.Component.Configuration
                 .Create()
                 .UseAutofac()
                 .RegisterCommonComponents()
@@ -85,7 +88,6 @@ namespace WPFTest
                 //Assembly.Load("ThinkCRM.Commands.Co"),
                 //Assembly.Load("ThinkCRM.CommandExecutors.Co"),
                 Assembly.Load("WCFWeb.Query.Co"),
-              
                 Assembly.Load("ThinkCRM.Infrastructure.Persistence.Co"),
                 //Assembly.Load("ThinkCRM.Domain.Co"),
               //  Assembly.Load("ThinkCRM.Infrastructure.Repository.Co")
@@ -133,10 +135,10 @@ namespace WPFTest
             builder.Update(container);//更新依赖注入
 
             //_queryService = ObjectContainer.Resolve<IDynamicQuery>();//多数据库下,查询的是默认数据库
-            ////设置系统变量
+            //////设置系统变量
             //ConfigurationSettings.SetThinkCRMCo(null, _queryService);
 
-            ////系统组件(log4net,Newtonsoft.Json)
+            //系统组件(log4net,Newtonsoft.Json)
             //Configuration.Instance
             //    .UseLog4Net()
             //    .UseJsonNet();

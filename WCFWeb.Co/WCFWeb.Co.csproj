@@ -80,6 +80,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Command\ThinkCRM.CommandExecutors.Co\ThinkCRM.CommandExecutors.Co.csproj">
+      <Project>{45082a80-6a9e-4a35-90d3-dd955bc0350e}</Project>
+      <Name>ThinkCRM.CommandExecutors.Co</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Command\ThinkCRM.Commands.Co\ThinkCRM.Commands.Co.csproj">
+      <Project>{56fbbfca-d173-473c-8b0b-c91e41b7ba5a}</Project>
+      <Name>ThinkCRM.Commands.Co</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\ThinkCRM.Infrastructure.DataEntity.Co.csproj">
       <Project>{f5ccf728-148a-4f77-a81d-dec279c995b8}</Project>
       <Name>ThinkCRM.Infrastructure.DataEntity.Co</Name>
