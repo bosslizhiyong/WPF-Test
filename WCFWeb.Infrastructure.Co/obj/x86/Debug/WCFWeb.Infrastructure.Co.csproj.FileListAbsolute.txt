@@ -14,3 +14,11 @@ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Infrastructure.Co\bin\x86\Debug\ThinkNet.
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Infrastructure.Co\obj\x86\Debug\WCFWeb.Infrastructure.Co.csprojResolveAssemblyReference.cache
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Infrastructure.Co\obj\x86\Debug\WCFWeb.Infrastructure.Co.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Infrastructure.Co\obj\x86\Debug\WCFWeb.Infrastructure.Co.pdb
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\bin\x86\Debug\WCFWeb.Infrastructure.Co.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\bin\x86\Debug\WCFWeb.Infrastructure.Co.pdb
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\bin\x86\Debug\ThinkNet.Utility.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\bin\x86\Debug\Newtonsoft.Json.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\bin\x86\Debug\ThinkNet.Utility.xml
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\obj\x86\Debug\WCFWeb.Infrastructure.Co.csprojResolveAssemblyReference.cache
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\obj\x86\Debug\WCFWeb.Infrastructure.Co.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Infrastructure.Co\obj\x86\Debug\WCFWeb.Infrastructure.Co.pdb

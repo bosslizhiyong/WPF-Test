@@ -13,7 +13,7 @@ using WCFWeb.Co.Contract;
 
 namespace WCFWeb.Co
 {
-    public  class ServiceBase : IServiceBase
+    public class ServiceBase : IServiceBase
     {
         #region 字    段
 
@@ -32,6 +32,7 @@ namespace WCFWeb.Co
         /// </summary>
         protected string _connectionStringName = "";
 
+        private string _exePath = "";//本程序所在路径
 
         #endregion 字    段
 
@@ -91,6 +92,18 @@ namespace WCFWeb.Co
             }
         }
 
+        /// <summary>
+        ///运行程序所在路径
+        /// </summary>
+        protected string ExePath
+        {
+            get
+            {
+                return _exePath;
+            }
+        }
+
+
         #endregion 属    性
 
         #region 构造函数
@@ -102,6 +115,7 @@ namespace WCFWeb.Co
         {
             _mQueryParamater = QueryParamater.Create();
             _mSimpleResult = new SimpleResult();
+            _exePath = System.Environment.CurrentDirectory;//本程序所在路径
         }
 
         #endregion 构造函数
@@ -444,7 +458,7 @@ namespace WCFWeb.Co
             }
             return true;
         }
-       
+
         /// <summary>
         /// 小数转换
         /// </summary>

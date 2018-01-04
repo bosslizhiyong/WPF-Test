@@ -72,6 +72,7 @@ namespace WCFWeb.Co.ApiHost
                 _dtService.Columns.Add("ServiceName");
                 _dtService.Columns.Add("ServiceStatus");
                 _dtService.Columns.Add("ServiceMemo");
+                _dtService.Columns.Add("ServiceContent");
                 string serviceDesc = "";
                 int numID = 0;
                 //配置文件
@@ -89,11 +90,11 @@ namespace WCFWeb.Co.ApiHost
                         }
                         StartService(serviceType, numID++);//启动服务
                         serviceDesc = GetServiceDescription(serviceType.GetCustomAttributes(typeof(DescriptionAttribute), false), serviceType.Name);
-                        AddServiceToDataTable(serviceDesc, "运行", el.Name);
+                        AddServiceToDataTable(serviceDesc, "运行", el.Name,"");
                     }
                     catch (Exception ex)
                     {
-                        AddServiceToDataTable(el.Name, "失败", el.Name);
+                        AddServiceToDataTable(el.Name, "失败", el.Name,ex.Message);
                       
                     }
              
@@ -151,12 +152,13 @@ namespace WCFWeb.Co.ApiHost
         /// <param name="serviceName">服务名称</param>
         /// <param name="serviceStatus">服务状态</param>
         /// <param name="serviceMemo">服务描述</param>
-        private void AddServiceToDataTable(string serviceName, string serviceStatus, string serviceMemo)
+        private void AddServiceToDataTable(string serviceName, string serviceStatus, string serviceMemo,string serviceCountent)
         {
             DataRow row = _dtService.NewRow();
             row["ServiceName"] = serviceName;
             row["ServiceStatus"] = serviceStatus;
             row["ServiceMemo"] = serviceMemo;
+            row["ServiceContent"] = serviceCountent;
             _dtService.Rows.Add(row);
         }
 

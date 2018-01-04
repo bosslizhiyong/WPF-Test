@@ -22,3 +22,15 @@ D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Query.Co\bin\x86\Debug\ThinkNet.Component
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Query.Co\obj\x86\Debug\WCFWeb.Query.Co.csprojResolveAssemblyReference.cache
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Query.Co\obj\x86\Debug\WCFWeb.Query.Co.dll
 D:\TestWCF\ThinkVersions\WCFWeb\WCFWeb.Query.Co\obj\x86\Debug\WCFWeb.Query.Co.pdb
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\WCFWeb.Query.Co.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\WCFWeb.Query.Co.pdb
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\ThinkNet.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\ThinkNet.Utility.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\ThinkNet.Component.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\Newtonsoft.Json.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\ThinkNet.xml
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\ThinkNet.Utility.xml
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\bin\x86\Debug\ThinkNet.Component.xml
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\obj\x86\Debug\WCFWeb.Query.Co.csprojResolveAssemblyReference.cache
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\obj\x86\Debug\WCFWeb.Query.Co.dll
+E:\WFC-Test\WPF-Test\WPF-Test\WCFWeb.Query.Co\obj\x86\Debug\WCFWeb.Query.Co.pdb

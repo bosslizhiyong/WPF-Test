@@ -17,6 +17,10 @@
 
 
     <Grid RenderTransformOrigin="0.548,0.626" Height="431" VerticalAlignment="Top" Margin="4,0,0,-1" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -26,7 +30,7 @@
             </TransformGroup>
         </Grid.RenderTransform>
 
-        <ListView x:Name="listView_Service" ItemsSource="{Binding}"  HorizontalAlignment="Right" Width="860" Margin="0,-1,2,2" RenderTransformOrigin="0.5,0.5">
+        <ListView x:Name="listView_Service" ItemsSource="{Binding}"  HorizontalAlignment="Right" Width="860" Margin="0,-1,2,2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Height="430" VerticalAlignment="Bottom">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="服务名称" DisplayMemberBinding="{Binding Path=ServiceName}"  Width="150" />
@@ -43,6 +47,14 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Grid.Column="1" Text="{Binding Path=ServiceMemo}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="异常说明" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock IsEnabled="False"  Grid.Column="1" Text="{Binding Path=ServiceContent}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

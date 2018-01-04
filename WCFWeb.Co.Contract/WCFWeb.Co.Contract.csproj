@@ -78,10 +78,9 @@
     <Compile Include="IUserService.cs" />
     <Compile Include="IServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Text\ITestService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Text\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\ThinkCRM.Infrastructure.Persistence.Co\ThinkCRM.Infrastructure.Persistence.Co.csproj">
       <Project>{0ce3a5ed-0760-4952-8a90-6e8ca9b378e9}</Project>

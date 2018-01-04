@@ -113,12 +113,11 @@ namespace WCFWeb.Co
             return "";
         }
 
-        static string exePath = System.Environment.CurrentDirectory;//本程序所在路径
 
         public string GetAccess()
         {
             //创建连接对象
-            OleDbConnection conn = new OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + exePath + @"\ConnCRMCo.mdb");
+            OleDbConnection conn = new OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + ExePath + @"\ConnCRMCo.mdb");
             conn.Open();
             //获取数据表
             //string sql = "select * from 表名 order by 字段1";
