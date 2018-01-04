@@ -1,5 +1,0 @@
-D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\bin\Debug\Co.Transfer.dll
-D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\bin\Debug\Co.Transfer.pdb
-D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\obj\Debug\WCFWeb.Co.Transfer.csprojResolveAssemblyReference.cache
-D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\obj\Debug\Co.Transfer.dll
-D:\TestWCF\WCFWeb\WCFWeb\WCFWeb.Co.Transfer\obj\Debug\Co.Transfer.pdb

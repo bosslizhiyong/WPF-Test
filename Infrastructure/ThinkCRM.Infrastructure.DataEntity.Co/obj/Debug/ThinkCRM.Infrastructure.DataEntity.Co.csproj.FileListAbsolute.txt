@@ -27,6 +27,6 @@ E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.
 E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\bin\Debug\ThinkNet.AutoUpdate.xml
 E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\bin\Debug\ThinkNet.Component.xml
 E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\bin\Debug\ThinkNet.Utility.xml
-E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\obj\Debug\ThinkCRM.Infrastructure.DataEntity.Co.csprojResolveAssemblyReference.cache
 E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\obj\Debug\ThinkCRM.Infrastructure.DataEntity.Co.dll
 E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\obj\Debug\ThinkCRM.Infrastructure.DataEntity.Co.pdb
+E:\WFC-Test\WPF-Test\WPF-Test\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\obj\Debug\ThinkCRM.Infrastructure.DataEntity.Co.csprojResolveAssemblyReference.cache
