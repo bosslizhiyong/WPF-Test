@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28AED6AC-4565-4FE5-9913-17B04B02E3F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThinkCRM.Infrastructure.Repository.Co</RootNamespace>
+    <AssemblyName>ThinkCRM.Infrastructure.Repository.Co</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThinkNet">
+      <HintPath>..\..\..\Reference\ThinkNet\ThinkNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkNet.Utility">
+      <HintPath>..\..\..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\IndividualizeRepository.cs" />
+    <Compile Include="Common\InitializeDomainService.cs" />
+    <Compile Include="Common\LoginDomainService.cs" />
+    <Compile Include="Common\Role\CopyRoleDomainService.cs" />
+    <Compile Include="DefaultDomainService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLDomainServiceBase.cs" />
+    <Compile Include="SQLRepositoryBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThinkCRM.Domain.Co\ThinkCRM.Domain.Co.csproj">
+      <Project>{92279f55-6f78-4a78-b5c3-c15ec9833e7e}</Project>
+      <Name>ThinkCRM.Domain.Co</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThinkCRM.Infrastructure.DataEntity.Co\ThinkCRM.Infrastructure.DataEntity.Co.csproj">
+      <Project>{f5ccf728-148a-4f77-a81d-dec279c995b8}</Project>
+      <Name>ThinkCRM.Infrastructure.DataEntity.Co</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThinkCRM.Infrastructure.Persistence.Co\ThinkCRM.Infrastructure.Persistence.Co.csproj">
+      <Project>{378c9722-f102-497b-9359-4feebff22f43}</Project>
+      <Name>ThinkCRM.Infrastructure.Persistence.Co</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
