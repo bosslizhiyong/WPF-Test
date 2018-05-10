@@ -66,8 +66,8 @@
     <Compile Include="ValidateRegex.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataEntity\ThinkCRM.Infrastructure.DataEntity.Co\ThinkCRM.Infrastructure.DataEntity.Co.csproj">
-      <Project>{92a25cc2-2e1c-4c29-b1ba-ecc08aee3b7a}</Project>
+    <ProjectReference Include="..\ThinkCRM.Infrastructure.DataEntity.Co\ThinkCRM.Infrastructure.DataEntity.Co.csproj">
+      <Project>{f5ccf728-148a-4f77-a81d-dec279c995b8}</Project>
       <Name>ThinkCRM.Infrastructure.DataEntity.Co</Name>
     </ProjectReference>
   </ItemGroup>

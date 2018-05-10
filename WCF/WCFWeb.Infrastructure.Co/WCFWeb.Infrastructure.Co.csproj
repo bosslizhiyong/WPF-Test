@@ -57,7 +57,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="ThinkNet.Utility">
-      <HintPath>..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

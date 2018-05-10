@@ -59,19 +59,19 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="ThinkNet">
-      <HintPath>..\Reference\ThinkNet\ThinkNet.dll</HintPath>
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.dll</HintPath>
     </Reference>
     <Reference Include="ThinkNet.Autofac">
-      <HintPath>..\Reference\ThinkNet\ThinkNet.Autofac.dll</HintPath>
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Autofac.dll</HintPath>
     </Reference>
     <Reference Include="ThinkNet.AutoUpdate">
-      <HintPath>..\Reference\ThinkNet\ThinkNet.AutoUpdate.dll</HintPath>
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.AutoUpdate.dll</HintPath>
     </Reference>
     <Reference Include="ThinkNet.Component">
-      <HintPath>..\Reference\ThinkNet\ThinkNet.Component.dll</HintPath>
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Component.dll</HintPath>
     </Reference>
     <Reference Include="ThinkNet.Utility">
-      <HintPath>..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
+      <HintPath>..\..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
