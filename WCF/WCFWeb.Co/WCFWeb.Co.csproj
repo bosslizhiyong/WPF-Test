@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorityService.cs" />
     <Compile Include="TestService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="ServiceBase.cs" />
