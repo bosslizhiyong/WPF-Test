@@ -53,6 +53,9 @@
     <Reference Include="ThinkNet.Utility">
       <HintPath>..\Reference\ThinkNet\ThinkNet.Utility.dll</HintPath>
     </Reference>
+    <Reference Include="TopSdk">
+      <HintPath>..\Reference\TaoBaoSDK\百川应用\TopSdk.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIService\ApiBase.cs" />
@@ -118,6 +121,11 @@
       <Project>{b53d3910-2d34-48d4-acf4-41709f2d3654}</Project>
       <Name>WCFWeb.Query.Co</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configxml\ConfigTaobao.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

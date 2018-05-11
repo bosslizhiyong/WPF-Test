@@ -36,7 +36,7 @@ namespace TaobaoTest
     public partial class FormBase : Form
     {
 
-        #region 属性
+        #region 属    性
         /// <summary>
         /// 日志管理
         /// </summary>
@@ -55,7 +55,24 @@ namespace TaobaoTest
         }
 
 
+        /// <summary>
+        /// 初始化数据
+        /// </summary>
+        protected virtual void InitData()
+        {
+           
+        }
 
+        /// <summary>
+        /// 加载数据
+        /// </summary>
+        protected virtual void LoadData()
+        {
+
+        }
+
+
+        #region 错误日志
         protected void WriteExceptionLog(string errInfo)
         {
             System.Diagnostics.StackTrace mStackTrace = new System.Diagnostics.StackTrace();
@@ -64,10 +81,8 @@ namespace TaobaoTest
             string methodName = mStackFrame.GetMethod().Name; // 方法名
             LogManager.Error(className + "-->" + methodName + "：" + errInfo);
             //LogManager.Error(this.Text + "：" + errInfo);
-           // CloseWaitDialog();
+            // CloseWaitDialog();
         }
-
-
         /// <summary>
         /// 写错误日志
         /// </summary>
@@ -80,7 +95,7 @@ namespace TaobaoTest
             string methodName = mStackFrame.GetMethod().Name; // 方法名
             LogManager.Error(className + "-->" + methodName + "：" + ex.Message);
             //LogManager.Error(this.Text + "：" + ex.Message);
-           // CloseWaitDialog();
+            // CloseWaitDialog();
 
             //解决无法通信问题
             if (ex.Message.Contains("System.ServiceModel.Channels.ServiceChannel") && ex.Message.Contains("无法用于通信") && ex.Message.Contains("出错"))
@@ -105,7 +120,7 @@ namespace TaobaoTest
                                 //设为空值
                                 f.SetValue(form, null);
                                 //清空缓存代理
-                              //?  Proxy.Instance().ClearProxyByKey(f.FieldType.ToString());
+                                //?  Proxy.Instance().ClearProxyByKey(f.FieldType.ToString());
                             }//end foreach (System.Reflection.FieldInfo f in fields)
                         }
                         methodInfo = form.GetType().GetMethod("CreateProxy");
@@ -120,5 +135,8 @@ namespace TaobaoTest
                 tProxy.Start();
             }
         }
+
+        #endregion 
+    
     }
 }

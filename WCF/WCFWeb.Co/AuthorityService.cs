@@ -10,6 +10,8 @@ using ThinkCRM.Commands.Co;
 using ThinkNet.Query.Core;
 using System.Collections;
 using System;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace WCFWeb.Co
 {
@@ -20,11 +22,16 @@ namespace WCFWeb.Co
         //接受Code
         public string GetCallbackCode(string code, string state)
         {
-            //保存code
+            string xmlPath = "/Configxml/ConfigTaobao.xml";
+            //string xmlpath = System.AppDomain.CurrentDomain.BaseDirectory + "ConfigTaobao.xml";
+            XmlDocument doc = new XmlDocument();
+            doc.Load(xmlPath);
+            XmlNode xn = doc.SelectSingleNode("//code");
+            string transDate = xn.InnerText;
 
-
-
-
+            //修改
+            xn.InnerText = code;
+            doc.Save(xmlPath);
             return code;
         }
     }
