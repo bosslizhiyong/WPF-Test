@@ -90,7 +90,7 @@ namespace TaobaoTest
                 string client_id = appkey;          //appkey
                 string redirect_uri = callbackUrl; //"http://127.0.0.1:1608/AuthorityService/client/GetCallbackCode";//?code='1212341dsf'&state='1'
                 //权限授权
-                strUrl = string.Format(@"https://oauth.taobao.com/authorize?response_type=code&client_id={0}&redirect_uri={1} &view=we", client_id, redirect_uri);
+                strUrl = string.Format(@"https://oauth.taobao.com/authorize?response_type=code&client_id={0}&redirect_uri={1}&view=1", client_id, redirect_uri);
                 //打开浏览器
                 System.Diagnostics.Process.Start(strUrl);
                 labTest.Text = "正在授权";
@@ -105,7 +105,7 @@ namespace TaobaoTest
         {
             try
             {
-                string xmlpath = "/Configxml/ConfigTaobao.xml";
+                string xmlpath = "./Configxml/ConfigTaobao.xml";
                 XmlDocument doc = new XmlDocument();
                 doc.Load(xmlpath);
                 XmlNode xn = doc.SelectSingleNode("//code");

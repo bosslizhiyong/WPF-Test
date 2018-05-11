@@ -22,7 +22,7 @@ namespace WCFWeb.Co
         //接受Code
         public string GetCallbackCode(string code, string state)
         {
-            string xmlPath = "/Configxml/ConfigTaobao.xml";
+            string xmlPath = "./Configxml/ConfigTaobao.xml";
             //string xmlpath = System.AppDomain.CurrentDomain.BaseDirectory + "ConfigTaobao.xml";
             XmlDocument doc = new XmlDocument();
             doc.Load(xmlPath);
