@@ -25,11 +25,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThinkNet.Component;
 using ThinkNet.Utility;
+using ThinkNet.Autofac;
+using WCFWeb.Infrastructure.Co;
 
 namespace TaobaoTest
 {
@@ -52,6 +55,33 @@ namespace TaobaoTest
         public FormBase()
         {
             InitializeComponent();
+
+            ConfigSettings.Initialize();
+
+            //系统组件(Autofac,log4net,Newtonsoft.Json)
+            Configuration
+                .Create()
+                .UseAutofac()
+                //   .RegisterCommonComponents()
+                .UseLog4Net();
+               // .UseJsonNet();
+
+            //IOC依赖注入
+            //var assemblies = new[]
+            //{
+            //   // Assembly.Load("ThinkCRM.Win.Co.Server"),
+            //    //Assembly.Load("ThinkNet.Component"),
+            //    //Assembly.Load("ThinkNet.Autofac"),
+            //    //Assembly.Load("ThinkNet"),
+            //    //Assembly.Load("ThinkCRM.Commands.Co"),
+            //    //Assembly.Load("ThinkCRM.CommandExecutors.Co"),
+            //    //Assembly.Load("ThinkCRM.Query.Co"),
+            //    //Assembly.Load("ThinkCRM.Infrastructure.Persistence.Co"),
+            //    //Assembly.Load("ThinkCRM.Domain.Co"),
+            //    //Assembly.Load("ThinkCRM.Infrastructure.Repository.Co")
+            //};
+            //var container = (ObjectContainer.Current as AutofacObjectContainer).Container;
+
         }
 
 
@@ -98,42 +128,42 @@ namespace TaobaoTest
             // CloseWaitDialog();
 
             //解决无法通信问题
-            if (ex.Message.Contains("System.ServiceModel.Channels.ServiceChannel") && ex.Message.Contains("无法用于通信") && ex.Message.Contains("出错"))
-            {
-                System.Threading.Tasks.Task tProxy = new System.Threading.Tasks.Task(new Action(() =>
-                {
-                    try
-                    {
-                        System.Reflection.BindingFlags flag = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.DeclaredOnly;
-                        System.Reflection.FieldInfo[] fields = null;
-                        System.Reflection.MethodInfo methodInfo = null;
+           // if (ex.Message.Contains("System.ServiceModel.Channels.ServiceChannel") && ex.Message.Contains("无法用于通信") && ex.Message.Contains("出错"))
+           // {
+                //System.Threading.Tasks.Task tProxy = new System.Threading.Tasks.Task(new Action(() =>
+                //{
+                //    try
+                //    {
+                //        System.Reflection.BindingFlags flag = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.DeclaredOnly;
+                //        System.Reflection.FieldInfo[] fields = null;
+                //        System.Reflection.MethodInfo methodInfo = null;
 
-                        Form form = this;
-                        fields = form.GetType().GetFields(flag);
-                        if (fields != null && fields.Length > 0)
-                        {
-                            foreach (System.Reflection.FieldInfo f in fields)
-                            {
-                                //不是服务的，跳过
-                                if (!f.FieldType.ToString().EndsWith("Service"))
-                                { continue; }
-                                //设为空值
-                                f.SetValue(form, null);
-                                //清空缓存代理
-                                //?  Proxy.Instance().ClearProxyByKey(f.FieldType.ToString());
-                            }//end foreach (System.Reflection.FieldInfo f in fields)
-                        }
-                        methodInfo = form.GetType().GetMethod("CreateProxy");
-                        if (methodInfo != null)
-                        {
-                            methodInfo.Invoke(form, null);
-                        }
-                    }
-                    catch (Exception)
-                    { }
-                }));
-                tProxy.Start();
-            }
+                //        Form form = this;
+                //        fields = form.GetType().GetFields(flag);
+                //        if (fields != null && fields.Length > 0)
+                //        {
+                //            foreach (System.Reflection.FieldInfo f in fields)
+                //            {
+                //                //不是服务的，跳过
+                //                if (!f.FieldType.ToString().EndsWith("Service"))
+                //                { continue; }
+                //                //设为空值
+                //                f.SetValue(form, null);
+                //                //清空缓存代理
+                //                //?  Proxy.Instance().ClearProxyByKey(f.FieldType.ToString());
+                //            }//end foreach (System.Reflection.FieldInfo f in fields)
+                //        }
+                //        methodInfo = form.GetType().GetMethod("CreateProxy");
+                //        if (methodInfo != null)
+                //        {
+                //            methodInfo.Invoke(form, null);
+                //        }
+                //    }
+                //    catch (Exception)
+                //    { }
+                //}));
+                //tProxy.Start();
+            //}
         }
 
         #endregion 

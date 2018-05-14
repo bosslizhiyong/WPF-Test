@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using System.Xml;
 using Top.Api;
@@ -123,7 +124,7 @@ namespace TaobaoTest
         {
             try
             {
-                int type = 2;
+                int type = 1;
                 if (type == 1)
                 {
                     #region 方式1
@@ -136,7 +137,14 @@ namespace TaobaoTest
                     pout.Add("redirect_uri", callbackUrl);
                     string output = webUtils.DoPost("https://oauth.taobao.com/token", pout);
                     Console.Write(output);
-                    txtjson.Text = output;
+                   
+                    if (!string.IsNullOrEmpty(output.ToString()))
+                    {
+                        JavaScriptSerializer Serializers = new JavaScriptSerializer();
+                        Root objroot = Serializers.Deserialize<Root>(output.ToString());
+                        txtjson.Text = objroot.refresh_token;
+
+                    }
                     #endregion
                 }
                 else if (type == 2)
@@ -150,6 +158,20 @@ namespace TaobaoTest
                     Console.WriteLine(rsp.Body);
                     // txtBoy.Text = rsp.Body;
                     txtjson.Text = rsp.Body;
+
+                    JavaScriptSerializer Serializers = new JavaScriptSerializer();
+                    //string strTest='{"top_auth_token_create_response":{"token_result":"{\"w1_expires_in\":1800,\"refresh_token_valid_time\":1526285728986,\"taobao_user_nick\":\"b01GflzbxtAIf8KwrSO9nNQofbFFz2kii4lSP%2FHJy9oC5c%3D\",\"re_expires_in\":0,\"expire_time\":1534061728986,\"open_uid\":\"AAE3PSJFAGQsSvMnMnzd485d\",\"token_type\":\"Bearer\",\"access_token\":\"6201321761ca692cc4cdeccc132acegff62acee1e8c41771837606616\",\"taobao_open_uid\":\"AAE3PSJFAGQsSvMnMnzd485d\",\"w1_valid\":1526287528986,\"refresh_token\":\"6201121d1ef9388da8ba2d6e48e3dfh4af13ac9198572431837606616\",\"w2_expires_in\":0,\"w2_valid\":1526285728986,\"r1_expires_in\":1800,\"r2_expires_in\":0,\"r2_valid\":1526285728986,\"r1_valid\":1526287528986,\"expires_in\":7776000}","request_id":"165an4c9a92sp"}} ';
+
+                    //json字符串转为数组对象, 反序列化
+                    TaobaoRoot objs = Serializers.Deserialize<TaobaoRoot>(rsp.Body.ToString());
+                    if (objs != null)
+                    {
+                        if (objs.top_auth_token_create_response != null)
+                        {
+                            string strroot = objs.top_auth_token_create_response.token_result;
+                            Root objroot = Serializers.Deserialize<Root>(strroot);
+                        }
+                    }
                     #endregion
                 }
 
