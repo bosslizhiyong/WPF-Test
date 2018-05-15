@@ -13,6 +13,7 @@ using Top.Api;
 using Top.Api.Request;
 using Top.Api.Response;
 using Top.Api.Util;
+using Top.Tmc;
 using WCFWeb.Co.ApiHost;
 
 namespace TaobaoTest
@@ -169,7 +170,7 @@ namespace TaobaoTest
                         if (objs.top_auth_token_create_response != null)
                         {
                             string strroot = objs.top_auth_token_create_response.token_result;
-                            Root objroot = Serializers.Deserialize<Root>(strroot);
+                                Root objroot = Serializers.Deserialize<Root>(strroot);
                         }
                     }
                     #endregion
@@ -185,8 +186,6 @@ namespace TaobaoTest
         #endregion
 
         #region 基本方法
-
-
         protected override void InitData()
         {
             this.url = System.Configuration.ConfigurationManager.AppSettings["appUrl"];
@@ -206,6 +205,31 @@ namespace TaobaoTest
 
 
         #endregion
+
+        private void btnMoney_Click(object sender, EventArgs es)
+        {
+            TmcClient client = new TmcClient(appkey, secret, "default");
+            client.OnMessage += (s, e) =>
+            {
+                try
+                {
+                    Console.WriteLine(e.Message.Content);
+                    Console.WriteLine(e.Message.Topic);
+                    // 默认不抛出异常则认为消息处理成功  
+                }
+                catch (Exception exp)
+                {
+                    Console.WriteLine(exp.StackTrace);
+                    e.Fail(); // 消息处理失败回滚，服务端需要重发  
+                }
+            };
+            client.Connect("ws://mc.api.taobao.com/");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
     }

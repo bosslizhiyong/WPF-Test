@@ -35,6 +35,8 @@
             this.btnGetCode = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
             this.txtjson = new System.Windows.Forms.TextBox();
+            this.btnMoney = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAppStart
@@ -70,7 +72,7 @@
             // labTest
             // 
             this.labTest.AutoSize = true;
-            this.labTest.Location = new System.Drawing.Point(765, 32);
+            this.labTest.Location = new System.Drawing.Point(170, 81);
             this.labTest.Name = "labTest";
             this.labTest.Size = new System.Drawing.Size(53, 12);
             this.labTest.TabIndex = 1;
@@ -104,11 +106,33 @@
             this.txtjson.Size = new System.Drawing.Size(624, 184);
             this.txtjson.TabIndex = 3;
             // 
+            // btnMoney
+            // 
+            this.btnMoney.Location = new System.Drawing.Point(654, 21);
+            this.btnMoney.Name = "btnMoney";
+            this.btnMoney.Size = new System.Drawing.Size(75, 23);
+            this.btnMoney.TabIndex = 4;
+            this.btnMoney.Text = "检查商家CRM预存余额是否足够进行活动";
+            this.btnMoney.UseVisualStyleBackColor = true;
+            this.btnMoney.Click += new System.EventHandler(this.btnMoney_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(670, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "授权测试";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmTaoBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 373);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMoney);
             this.Controls.Add(this.txtjson);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.labTest);
@@ -133,6 +157,8 @@
         private System.Windows.Forms.Button btnGetCode;
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.TextBox txtjson;
+        private System.Windows.Forms.Button btnMoney;
+        private System.Windows.Forms.Button button1;
     }
 }
 
