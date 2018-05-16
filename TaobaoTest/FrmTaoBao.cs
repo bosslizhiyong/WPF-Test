@@ -229,6 +229,10 @@ namespace TaobaoTest
         private void button1_Click(object sender, EventArgs e)
         {
 
+           string strSql = "";
+
+           string sign=  TaoBaoUtility.SignTopRequest(null, "", "");
+
         }
 
 

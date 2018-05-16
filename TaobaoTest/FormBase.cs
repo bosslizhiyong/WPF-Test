@@ -20,14 +20,6 @@
 #endregion Copyright
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThinkNet.Component;
 using ThinkNet.Utility;
@@ -56,34 +48,11 @@ namespace TaobaoTest
         {
             InitializeComponent();
 
-            ConfigSettings.Initialize();
-
-            //系统组件(Autofac,log4net,Newtonsoft.Json)
-            Configuration
-                .Create()
-                .UseAutofac()
-                //   .RegisterCommonComponents()
-                .UseLog4Net();
-               // .UseJsonNet();
-
-            //IOC依赖注入
-            //var assemblies = new[]
-            //{
-            //   // Assembly.Load("ThinkCRM.Win.Co.Server"),
-            //    //Assembly.Load("ThinkNet.Component"),
-            //    //Assembly.Load("ThinkNet.Autofac"),
-            //    //Assembly.Load("ThinkNet"),
-            //    //Assembly.Load("ThinkCRM.Commands.Co"),
-            //    //Assembly.Load("ThinkCRM.CommandExecutors.Co"),
-            //    //Assembly.Load("ThinkCRM.Query.Co"),
-            //    //Assembly.Load("ThinkCRM.Infrastructure.Persistence.Co"),
-            //    //Assembly.Load("ThinkCRM.Domain.Co"),
-            //    //Assembly.Load("ThinkCRM.Infrastructure.Repository.Co")
-            //};
-            //var container = (ObjectContainer.Current as AutofacObjectContainer).Container;
 
         }
 
+
+    
 
         /// <summary>
         /// 初始化数据
