@@ -47,12 +47,7 @@ namespace TaobaoTest
         public FormBase()
         {
             InitializeComponent();
-
-
         }
-
-
-    
 
         /// <summary>
         /// 初始化数据

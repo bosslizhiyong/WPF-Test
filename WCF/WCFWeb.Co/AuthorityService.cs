@@ -34,5 +34,12 @@ namespace WCFWeb.Co
             doc.Save(xmlPath);
             return code;
         }
+
+
+        public string GetPostTest(string code)
+        {
+            // http://127.0.0.1:1608/AuthorityService/client/GetPostTest
+            return code;
+        }
     }
 }

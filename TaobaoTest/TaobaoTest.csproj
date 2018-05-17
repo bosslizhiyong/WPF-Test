@@ -105,6 +105,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\HttpResponseTool\HttpResponseTool.cs" />
     <Compile Include="Tool\TaoBaoUtility.cs" />
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
@@ -170,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Product\AddProduct\" />
-    <Folder Include="Tool\E\" />
     <Folder Include="Tool\Post\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

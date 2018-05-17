@@ -21,8 +21,9 @@ namespace TaobaoTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTaoBao());
             InitializeThinkCRMCo();
+            Application.Run(new FrmTaoBao());
+           
         }
 
         public static void InitializeThinkCRMCo()

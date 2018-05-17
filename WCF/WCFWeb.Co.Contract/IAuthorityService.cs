@@ -9,10 +9,14 @@ namespace WCFWeb.Co.Contract
     [ServiceContract]
     public interface IAuthorityService
     {
-       
+
         [OperationContract]
         [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.WrappedRequest, RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         string GetCallbackCode(string code, string state);
+        
+        [OperationContract]
+        [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.WrappedRequest, RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        string GetPostTest(string code);
     }
 
 }
