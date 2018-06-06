@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+  <Root>
+    <!--正式环境-->
+    <appUrl>https://eco.taobao.com/router/rest</appUrl>
+    <appKey>24880752</appKey>
+    <appSecret>86cd516f2c4c1cb0835a833d44f76a4a</appSecret>
+  
+    
+    <!--沙箱环境-->
+    <appUrl1>https://gw.api.tbsandbox.com/router/rest</appUrl1>
+    <appKey1>1024880752</appKey1>
+    <appSecret1>sandbox1e833abe048d6756a653f4b72</appSecret1>
+    
+    
+    <!--页面跳转同步返回页面文件路径 要用 http://格式的完整路径，不允许加?id=123这类自定义参数-->
+    <return_url>http://127.0.0.1:1608/AuthorityService/client/GetCallbackCode</return_url>
+    
+    <code>0</code>
+    <session>0</session>
+</Root>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

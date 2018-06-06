@@ -40,7 +40,10 @@
       <HintPath>..\Reference\Autofac\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Mvc">
-      <HintPath>..\Reference\Autofac\Autofac.Integration.Mvc.dll</HintPath>
+      <HintPath>..\..\Reference\Autofac\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\..\Reference\LitJSON.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\Reference\log4net.dll</HintPath>
@@ -97,6 +100,9 @@
     <Compile Include="FrmTaoBao.Designer.cs">
       <DependentUpon>FrmTaoBao.cs</DependentUpon>
     </Compile>
+    <Compile Include="OAuth\oauth_config.cs" />
+    <Compile Include="OAuth\oauth_helper.cs" />
+    <Compile Include="OAuth\taobao_helper.cs" />
     <Compile Include="Product\ProductInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,35 +149,43 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCF\WCFWeb.Co.Contract\WCFWeb.Co.Contract.csproj">
+    <ProjectReference Include="..\..\Tool\Taobao.Common\Taobao.Common.csproj">
+      <Project>{f8bc19ce-56e3-4281-811c-43f6c784e9ca}</Project>
+      <Name>Taobao.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WCF\WCFWeb.Co.Contract\WCFWeb.Co.Contract.csproj">
       <Project>{055c0983-576a-4be1-9feb-69537ac96eb5}</Project>
       <Name>WCFWeb.Co.Contract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WCF\WCFWeb.Co.Transfer\WCFWeb.Co.Transfer.csproj">
+    <ProjectReference Include="..\..\WCF\WCFWeb.Co.Transfer\WCFWeb.Co.Transfer.csproj">
       <Project>{b7aba11b-17f7-48a4-8002-cac7ce1572f6}</Project>
       <Name>WCFWeb.Co.Transfer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WCF\WCFWeb.Co\WCFWeb.Co.csproj">
+    <ProjectReference Include="..\..\WCF\WCFWeb.Co\WCFWeb.Co.csproj">
       <Project>{75744b01-9acf-43b3-a691-97aab0a74c37}</Project>
       <Name>WCFWeb.Co</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WCF\WCFWeb.Infrastructure.Co\WCFWeb.Infrastructure.Co.csproj">
+    <ProjectReference Include="..\..\WCF\WCFWeb.Infrastructure.Co\WCFWeb.Infrastructure.Co.csproj">
       <Project>{a21203a2-41df-442f-b129-6bf49c9d4228}</Project>
       <Name>WCFWeb.Infrastructure.Co</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WCF\WCFWeb.Query.Co\WCFWeb.Query.Co.csproj">
+    <ProjectReference Include="..\..\WCF\WCFWeb.Query.Co\WCFWeb.Query.Co.csproj">
       <Project>{b53d3910-2d34-48d4-acf4-41709f2d3654}</Project>
       <Name>WCFWeb.Query.Co</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configxml\ConfigTaobao.xml">
+    <Content Include="xmlconfig\configtaobao.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Product\AddProduct\" />
     <Folder Include="Tool\Post\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

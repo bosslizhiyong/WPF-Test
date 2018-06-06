@@ -226,9 +226,6 @@ namespace TaobaoTest
 
         public static string PostUrl(string url, string postData)
         {
-            //
-
-
             string result = "";
 
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);

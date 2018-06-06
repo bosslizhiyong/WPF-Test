@@ -37,6 +37,8 @@
             this.txtjson = new System.Windows.Forms.TextBox();
             this.btnMoney = new System.Windows.Forms.Button();
             this.btnAuthorizationTest = new System.Windows.Forms.Button();
+            this.btnSellInfo = new System.Windows.Forms.Button();
+            this.btnOAuth = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAppStart
@@ -100,10 +102,10 @@
             // 
             // txtjson
             // 
-            this.txtjson.Location = new System.Drawing.Point(25, 117);
+            this.txtjson.Location = new System.Drawing.Point(3, 293);
             this.txtjson.Multiline = true;
             this.txtjson.Name = "txtjson";
-            this.txtjson.Size = new System.Drawing.Size(624, 184);
+            this.txtjson.Size = new System.Drawing.Size(868, 199);
             this.txtjson.TabIndex = 3;
             // 
             // btnMoney
@@ -118,7 +120,7 @@
             // 
             // btnAuthorizationTest
             // 
-            this.btnAuthorizationTest.Location = new System.Drawing.Point(670, 117);
+            this.btnAuthorizationTest.Location = new System.Drawing.Point(770, 21);
             this.btnAuthorizationTest.Name = "btnAuthorizationTest";
             this.btnAuthorizationTest.Size = new System.Drawing.Size(75, 23);
             this.btnAuthorizationTest.TabIndex = 5;
@@ -126,11 +128,33 @@
             this.btnAuthorizationTest.UseVisualStyleBackColor = true;
             this.btnAuthorizationTest.Click += new System.EventHandler(this.btnAuthorizationTest_Click);
             // 
+            // btnSellInfo
+            // 
+            this.btnSellInfo.Location = new System.Drawing.Point(699, 76);
+            this.btnSellInfo.Name = "btnSellInfo";
+            this.btnSellInfo.Size = new System.Drawing.Size(146, 23);
+            this.btnSellInfo.TabIndex = 5;
+            this.btnSellInfo.Text = "查询卖家用户信息";
+            this.btnSellInfo.UseVisualStyleBackColor = true;
+            this.btnSellInfo.Click += new System.EventHandler(this.btnSellInfo_Click);
+            // 
+            // btnOAuth
+            // 
+            this.btnOAuth.Location = new System.Drawing.Point(3, 262);
+            this.btnOAuth.Name = "btnOAuth";
+            this.btnOAuth.Size = new System.Drawing.Size(75, 23);
+            this.btnOAuth.TabIndex = 6;
+            this.btnOAuth.Text = "授权";
+            this.btnOAuth.UseVisualStyleBackColor = true;
+            this.btnOAuth.Click += new System.EventHandler(this.btnOAuth_Click);
+            // 
             // FrmTaoBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 373);
+            this.ClientSize = new System.Drawing.Size(883, 504);
+            this.Controls.Add(this.btnOAuth);
+            this.Controls.Add(this.btnSellInfo);
             this.Controls.Add(this.btnAuthorizationTest);
             this.Controls.Add(this.btnMoney);
             this.Controls.Add(this.txtjson);
@@ -159,6 +183,8 @@
         private System.Windows.Forms.TextBox txtjson;
         private System.Windows.Forms.Button btnMoney;
         private System.Windows.Forms.Button btnAuthorizationTest;
+        private System.Windows.Forms.Button btnSellInfo;
+        private System.Windows.Forms.Button btnOAuth;
     }
 }
 

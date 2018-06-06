@@ -37,5 +37,10 @@ namespace TaobaoTest.Product
         {
             InitializeComponent();
         }
+
+        private void ProductInfo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

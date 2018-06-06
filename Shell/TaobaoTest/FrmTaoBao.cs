@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using System.Xml;
+using Taobao.Common;
 using Top.Api;
 using Top.Api.Request;
 using Top.Api.Response;
@@ -28,11 +29,14 @@ namespace TaobaoTest
         string secret = "";
         string callbackUrl = "";
         string code = "";
+        string sessionKey = "";
         #endregion
 
         #region 属    性
 
         public ApiHost apiHost { get; set; }
+
+        //  public string SessionKey { get { }; set; } 
 
         #endregion
 
@@ -105,7 +109,7 @@ namespace TaobaoTest
 
                 // string resurt = HttpResponseTool.CreatePostHttpResponse(strUrl, txtParams, null);
 
-                              
+
 
                 string strUrl = "http://127.0.0.1:1608/AuthorityService/client/GetPostTest";
                 Dictionary<string, string> pParams = new Dictionary<string, string>();
@@ -124,7 +128,6 @@ namespace TaobaoTest
 
         }
 
-
         private void btnAppStart_Click(object sender, EventArgs e)
         {
             try
@@ -140,11 +143,11 @@ namespace TaobaoTest
                         DataTable dt = table;
                         if (dt != null)
                         {
-                           // labTest.Text = "WCF启动成功";
+                            labTest.Text = "WCF启动成功";
                         }
                     }));
                     t.Start();
-                   
+
                 }
             }
             catch (Exception ex)
@@ -176,7 +179,7 @@ namespace TaobaoTest
         {
             try
             {
-                string xmlpath = "./Configxml/ConfigTaobao.xml";
+                string xmlpath = "./Configxml/configtaobao.xml";
                 XmlDocument doc = new XmlDocument();
                 doc.Load(xmlpath);
                 XmlNode xn = doc.SelectSingleNode("//code");
@@ -214,11 +217,12 @@ namespace TaobaoTest
                         Root objroot = Serializers.Deserialize<Root>(output.ToString());
                         txtjson.Text = objroot.refresh_token;
 
-                        string xmlPath = "./Configxml/ConfigTaobao.xml";
+                        string xmlPath = "./Configxml/configtaobao.xml";
                         XmlDocument doc = new XmlDocument();
                         doc.Load(xmlPath);
                         XmlNode xn = doc.SelectSingleNode("//session");
                         xn.InnerText = objroot.refresh_token;
+                        sessionKey = objroot.refresh_token;
                         doc.Save(xmlPath);
                     }
                     #endregion
@@ -296,7 +300,7 @@ namespace TaobaoTest
             DateTime timestamp = DateTime.Now; ///GetTimeStamp(DateTime.Now):
 
 
-            string xmlpath = "./Configxml/ConfigTaobao.xml";
+            string xmlpath = "./Configxml/configtaobao.xml";
             XmlDocument doc = new XmlDocument();
             doc.Load(xmlpath);
             XmlNode xn = doc.SelectSingleNode("//session");
@@ -338,11 +342,36 @@ namespace TaobaoTest
 
             string lijingurl = "http://qimen.api.taobao.com/router/qm";
             string resurt = HttpResponseTool.CreatePostHttpResponse(lijingurl, txtParams, null);
+        }
 
 
 
+        /// <summary>
+        /// 查询卖家用户信息（只能查询有店铺的用户） 只能卖家类应用调用。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSellInfo_Click(object sender, EventArgs e)
+        {
+            //令牌
+            if (sessionKey == "")
+            {
+                Console.WriteLine("sessionKey 为空");
+                return;
+            }
+
+            // ITopClient client = new DefaultTopClient(url, appkey, secret);
+            //UserSellerGetRequest req = new UserSellerGetRequest();
+            // req.Fields = "nick,sex";
+            //UserSellerGetResponse rsp = client.Execute(req, sessionKey);
+            // Console.WriteLine(rsp.Body);
 
 
+            //ITopClient client = new DefaultTopClient(url, appkey, secret);
+            //OpensecurityUidGetRequest req = new OpensecurityUidGetRequest();
+            //req.TbUserId = 123456L;
+            //OpensecurityUidGetResponse rsp = client.Execute(req);
+            //Console.WriteLine(rsp.Body);
         }
         #endregion
 
@@ -370,7 +399,78 @@ namespace TaobaoTest
             long t = (time.Ticks - startTime.Ticks) / 10000;   //除10000调整为13位      
             return t.ToString();
         }
+
+        private void btnOAuth_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                oauth_config config = oauth_helper.get_config("taobao");
+
+                string strUrl = "";
+                string client_id = config.oauth_app_id; //appkey;          //appkey
+                string redirect_uri = config.return_uri;  //callbackUrl; //"http://127.0.0.1:1608/AuthorityService/client/GetCallbackCode";//?code='1212341dsf'&state='1'
+                //权限授权
+                strUrl = string.Format(@"https://oauth.taobao.com/authorize?response_type=code&client_id={0}&redirect_uri={1}&view=1", client_id, redirect_uri);
+                //打开浏览器
+                System.Diagnostics.Process.Start(strUrl);
+                labTest.Text = "正在授权";
+
+                //回掉事件
+                btnOAuth.Text = "确认已平台验证";
+                 config = oauth_helper.get_config("taobao");
+                if (config.code != "0")
+                {
+                    Dictionary<string, object> obj = taobao_helper.get_access_token(config.code);
+
+                    #region 方式1
+                    //WebUtils webUtils = new WebUtils();
+                    //IDictionary<string, string> pout = new Dictionary<string, string>();
+                    //pout.Add("grant_type", "authorization_code");
+                    //pout.Add("client_id", appkey);
+                    //pout.Add("client_secret", secret);
+                    //pout.Add("code", code);
+                    //pout.Add("redirect_uri", callbackUrl);
+                    //string output = webUtils.DoPost("https://oauth.taobao.com/token", pout);
+                    //Console.Write(output);
+
+                    //if (!string.IsNullOrEmpty(output.ToString()))
+                    //{
+                    //    JavaScriptSerializer Serializers = new JavaScriptSerializer();
+                    //    Root objroot = Serializers.Deserialize<Root>(output.ToString());
+                    //    txtjson.Text = objroot.refresh_token;
+
+                    //    string xmlPath = "./Configxml/configtaobao.xml";
+                    //    XmlDocument doc = new XmlDocument();
+                    //    doc.Load(xmlPath);
+                    //    XmlNode xn = doc.SelectSingleNode("//session");
+                    //    xn.InnerText = objroot.refresh_token;
+                    //    sessionKey = objroot.refresh_token;
+                    //    doc.Save(xmlPath);
+                    //}
+                    #endregion
+                }
+                else
+                {
+                    MessageBox.Show("请确认在平台验证");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                WriteExceptionLog(ex);
+            }
+
+
+
+
+
+
+
+
+
+        }
         #endregion
+
 
 
     }

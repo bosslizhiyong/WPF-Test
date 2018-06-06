@@ -1,6 +1,6 @@
-﻿namespace TaobaoTest
+﻿namespace TaobaoTest.Product
 {
-    partial class FormBase
+    partial class ProductInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FormBase
+            // ProductInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 265);
-            this.Name = "FormBase";
-            this.Text = "FormBase";
+            this.ClientSize = new System.Drawing.Size(370, 234);
+            this.Name = "ProductInfo";
+            this.Text = "产品信息窗口";
+            this.Load += new System.EventHandler(this.ProductInfo_Load);
             this.ResumeLayout(false);
 
         }
