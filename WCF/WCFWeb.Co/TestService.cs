@@ -36,7 +36,6 @@ namespace WCFWeb.Co
             return null;
         }
 
-  
         public string GetAccess()
         {
             //创建连接对象

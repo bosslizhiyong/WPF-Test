@@ -86,8 +86,6 @@
   <ItemGroup>
     <Compile Include="APIService\ApiBase.cs" />
     <Compile Include="APIService\ApiHost.cs" />
-    <Compile Include="DataEntity\TaoBao\TaobaoRoot.cs" />
-    <Compile Include="DataEntity\TaoBao\Root.cs" />
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +98,8 @@
     <Compile Include="FrmTaoBao.Designer.cs">
       <DependentUpon>FrmTaoBao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presenters\SocketsClient.cs" />
+    <Compile Include="Presenters\SocketsServer.cs" />
     <Compile Include="OAuth\oauth_config.cs" />
     <Compile Include="OAuth\oauth_helper.cs" />
     <Compile Include="OAuth\taobao_helper.cs" />
@@ -113,6 +113,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tool\HttpResponseTool\HttpResponseTool.cs" />
     <Compile Include="Tool\TaoBaoUtility.cs" />
+    <Compile Include="Tool\Util.cs" />
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +150,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\ThinkCRM.Infrastructure.DataEntity.Co\ThinkCRM.Infrastructure.DataEntity.Co.csproj">
+      <Project>{f5ccf728-148a-4f77-a81d-dec279c995b8}</Project>
+      <Name>ThinkCRM.Infrastructure.DataEntity.Co</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Tool\Taobao.Common\Taobao.Common.csproj">
       <Project>{f8bc19ce-56e3-4281-811c-43f6c784e9ca}</Project>
       <Name>Taobao.Common</Name>
@@ -181,6 +186,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataEntity\TaoBao\" />
     <Folder Include="Product\AddProduct\" />
     <Folder Include="Tool\Post\" />
   </ItemGroup>

@@ -34,11 +34,16 @@
             this.labTest = new System.Windows.Forms.Label();
             this.btnGetCode = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
-            this.txtjson = new System.Windows.Forms.TextBox();
+            this.txtJson = new System.Windows.Forms.TextBox();
             this.btnMoney = new System.Windows.Forms.Button();
             this.btnAuthorizationTest = new System.Windows.Forms.Button();
             this.btnSellInfo = new System.Windows.Forms.Button();
             this.btnOAuth = new System.Windows.Forms.Button();
+            this.butTest1 = new System.Windows.Forms.Button();
+            this.btnkeyword = new System.Windows.Forms.Button();
+            this.btnlijing = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAppStart
@@ -100,13 +105,13 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
-            // txtjson
+            // txtJson
             // 
-            this.txtjson.Location = new System.Drawing.Point(3, 293);
-            this.txtjson.Multiline = true;
-            this.txtjson.Name = "txtjson";
-            this.txtjson.Size = new System.Drawing.Size(868, 199);
-            this.txtjson.TabIndex = 3;
+            this.txtJson.Location = new System.Drawing.Point(3, 293);
+            this.txtJson.Multiline = true;
+            this.txtJson.Name = "txtJson";
+            this.txtJson.Size = new System.Drawing.Size(868, 199);
+            this.txtJson.TabIndex = 3;
             // 
             // btnMoney
             // 
@@ -148,16 +153,71 @@
             this.btnOAuth.UseVisualStyleBackColor = true;
             this.btnOAuth.Click += new System.EventHandler(this.btnOAuth_Click);
             // 
+            // butTest1
+            // 
+            this.butTest1.Location = new System.Drawing.Point(113, 231);
+            this.butTest1.Name = "butTest1";
+            this.butTest1.Size = new System.Drawing.Size(138, 23);
+            this.butTest1.TabIndex = 7;
+            this.butTest1.Text = "测试接口原生访问卖家";
+            this.butTest1.UseVisualStyleBackColor = true;
+            this.butTest1.Click += new System.EventHandler(this.butTest1_Click);
+            // 
+            // btnkeyword
+            // 
+            this.btnkeyword.Location = new System.Drawing.Point(565, 231);
+            this.btnkeyword.Name = "btnkeyword";
+            this.btnkeyword.Size = new System.Drawing.Size(131, 23);
+            this.btnkeyword.TabIndex = 8;
+            this.btnkeyword.Text = "禁忌关键词匹配";
+            this.btnkeyword.UseVisualStyleBackColor = true;
+            this.btnkeyword.Click += new System.EventHandler(this.btnkeyword_Click);
+            // 
+            // btnlijing
+            // 
+            this.btnlijing.Location = new System.Drawing.Point(476, 264);
+            this.btnlijing.Name = "btnlijing";
+            this.btnlijing.Size = new System.Drawing.Size(75, 23);
+            this.btnlijing.TabIndex = 9;
+            this.btnlijing.Text = "黎婧测试";
+            this.btnlijing.UseVisualStyleBackColor = true;
+            this.btnlijing.Click += new System.EventHandler(this.btnlijing_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(565, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "获取开放平台出口IP段";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnBuy
+            // 
+            this.btnBuy.Location = new System.Drawing.Point(113, 261);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(127, 23);
+            this.btnBuy.TabIndex = 10;
+            this.btnBuy.Text = "买家信息获取";
+            this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
             // FrmTaoBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 504);
+            this.Controls.Add(this.btnBuy);
+            this.Controls.Add(this.btnlijing);
+            this.Controls.Add(this.btnkeyword);
+            this.Controls.Add(this.butTest1);
             this.Controls.Add(this.btnOAuth);
             this.Controls.Add(this.btnSellInfo);
             this.Controls.Add(this.btnAuthorizationTest);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMoney);
-            this.Controls.Add(this.txtjson);
+            this.Controls.Add(this.txtJson);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.labTest);
             this.Controls.Add(this.btnGetUrlCode);
@@ -180,11 +240,16 @@
         private System.Windows.Forms.Label labTest;
         private System.Windows.Forms.Button btnGetCode;
         private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.TextBox txtjson;
+        private System.Windows.Forms.TextBox txtJson;
         private System.Windows.Forms.Button btnMoney;
         private System.Windows.Forms.Button btnAuthorizationTest;
         private System.Windows.Forms.Button btnSellInfo;
         private System.Windows.Forms.Button btnOAuth;
+        private System.Windows.Forms.Button butTest1;
+        private System.Windows.Forms.Button btnkeyword;
+        private System.Windows.Forms.Button btnlijing;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuy;
     }
 }
 

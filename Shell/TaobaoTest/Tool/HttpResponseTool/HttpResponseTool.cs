@@ -46,13 +46,10 @@ namespace TaobaoTest
             string paraUrlCoded = JSonHelper.Serialize(parameters);
             //string str = HttpPost(url, paraUrlCoded);
 
-
             Task t = new Task(new Action(() =>
             {
                 //推送产品
                 string str = PostUrl(url, paraUrlCoded); 
-
-
             }));
             t.Start();
             // string str =PostUrl(url, paraUrlCoded); 

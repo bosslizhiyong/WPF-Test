@@ -1,4 +1,6 @@
-﻿using System;
+﻿using APITest;
+using LitJson;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +14,15 @@ using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using System.Xml;
 using Taobao.Common;
+using ThinkCRM.Infrastructure.DataEntity.Co;
+using ThinkNet.Utility;
 using Top.Api;
 using Top.Api.Request;
 using Top.Api.Response;
 using Top.Api.Util;
 using Top.Tmc;
 using WCFWeb.Co.ApiHost;
+
 
 namespace TaobaoTest
 {
@@ -30,12 +35,21 @@ namespace TaobaoTest
         string callbackUrl = "";
         string code = "";
         string sessionKey = "";
+
+
+        public delegate void ChagelabState();
+
+
         #endregion
 
         #region 属    性
 
         public ApiHost apiHost { get; set; }
 
+        /// <summary>
+        /// Socket
+        /// </summary>
+        public SocketsServer server;
         //  public string SessionKey { get { }; set; } 
 
         #endregion
@@ -45,13 +59,9 @@ namespace TaobaoTest
         {
             InitializeComponent();
         }
-
-
         #endregion
 
         #region 窗体事件
-
-
         private void FrmTaoBao_Load(object sender, EventArgs e)
         {
             InitData();
@@ -132,22 +142,23 @@ namespace TaobaoTest
         {
             try
             {
+                //监听API
+                StartAPISocket();
                 if (apiHost == null)
                 {
-
                     Task t = new Task(new Action(() =>
                     {
                         apiHost = new ApiHost();
                         apiHost.StartServices();
+                        //  apiHost.ConnectService();
                         DataTable table = apiHost.DtSericer;
                         DataTable dt = table;
                         if (dt != null)
                         {
-                            labTest.Text = "WCF启动成功";
+                            //   labTest.Text = "WCF启动成功";
                         }
                     }));
                     t.Start();
-
                 }
             }
             catch (Exception ex)
@@ -215,7 +226,7 @@ namespace TaobaoTest
                     {
                         JavaScriptSerializer Serializers = new JavaScriptSerializer();
                         Root objroot = Serializers.Deserialize<Root>(output.ToString());
-                        txtjson.Text = objroot.refresh_token;
+                        txtJson.Text = objroot.refresh_token;
 
                         string xmlPath = "./Configxml/configtaobao.xml";
                         XmlDocument doc = new XmlDocument();
@@ -237,7 +248,7 @@ namespace TaobaoTest
                     TopAuthTokenCreateResponse rsp = client.Execute(req);
                     Console.WriteLine(rsp.Body);
                     // txtBoy.Text = rsp.Body;
-                    txtjson.Text = rsp.Body;
+                    txtJson.Text = rsp.Body;
 
                     JavaScriptSerializer Serializers = new JavaScriptSerializer();
                     //string strTest='{"top_auth_token_create_response":{"token_result":"{\"w1_expires_in\":1800,\"refresh_token_valid_time\":1526285728986,\"taobao_user_nick\":\"b01GflzbxtAIf8KwrSO9nNQofbFFz2kii4lSP%2FHJy9oC5c%3D\",\"re_expires_in\":0,\"expire_time\":1534061728986,\"open_uid\":\"AAE3PSJFAGQsSvMnMnzd485d\",\"token_type\":\"Bearer\",\"access_token\":\"6201321761ca692cc4cdeccc132acegff62acee1e8c41771837606616\",\"taobao_open_uid\":\"AAE3PSJFAGQsSvMnMnzd485d\",\"w1_valid\":1526287528986,\"refresh_token\":\"6201121d1ef9388da8ba2d6e48e3dfh4af13ac9198572431837606616\",\"w2_expires_in\":0,\"w2_valid\":1526285728986,\"r1_expires_in\":1800,\"r2_expires_in\":0,\"r2_valid\":1526285728986,\"r1_valid\":1526287528986,\"expires_in\":7776000}","request_id":"165an4c9a92sp"}} ';
@@ -344,8 +355,6 @@ namespace TaobaoTest
             string resurt = HttpResponseTool.CreatePostHttpResponse(lijingurl, txtParams, null);
         }
 
-
-
         /// <summary>
         /// 查询卖家用户信息（只能查询有店铺的用户） 只能卖家类应用调用。
         /// </summary>
@@ -373,32 +382,6 @@ namespace TaobaoTest
             //OpensecurityUidGetResponse rsp = client.Execute(req);
             //Console.WriteLine(rsp.Body);
         }
-        #endregion
-
-        #region 基本方法
-        protected override void InitData()
-        {
-            this.url = System.Configuration.ConfigurationManager.AppSettings["appUrl"];
-            this.appkey = System.Configuration.ConfigurationManager.AppSettings["appKey"];
-            this.secret = System.Configuration.ConfigurationManager.AppSettings["appSecret"];
-            this.callbackUrl = System.Configuration.ConfigurationManager.AppSettings["callbackUrl"];
-        }
-
-        protected override void LoadData()
-        {
-            //ITopClient client = new DefaultTopClient(url, appkey, secret);
-            //UserBuyerGetRequest req = new UserBuyerGetRequest();
-            //req.Fields = "nick,sex";
-            //UserBuyerGetResponse rsp = client.Execute(req, sessionKey);
-            //Console.WriteLine(rsp.Body);
-        }
-
-        public string GetTimeStamp(System.DateTime time)
-        {
-            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1, 0, 0, 0, 0));
-            long t = (time.Ticks - startTime.Ticks) / 10000;   //除10000调整为13位      
-            return t.ToString();
-        }
 
         private void btnOAuth_Click(object sender, EventArgs e)
         {
@@ -417,8 +400,8 @@ namespace TaobaoTest
 
                 //回掉事件
                 btnOAuth.Text = "确认已平台验证";
-                 config = oauth_helper.get_config("taobao");
-                if (config.code != "0")
+                config = oauth_helper.get_config("taobao");
+                if (config.code != "0" && config.code != "")
                 {
                     Dictionary<string, object> obj = taobao_helper.get_access_token(config.code);
 
@@ -451,7 +434,7 @@ namespace TaobaoTest
                 }
                 else
                 {
-                    MessageBox.Show("请确认在平台验证");
+                    //   MessageBox.Show("请确认在平台验证");
                 }
 
             }
@@ -459,17 +442,209 @@ namespace TaobaoTest
             {
                 WriteExceptionLog(ex);
             }
+        }
+
+        private void butTest1_Click(object sender, EventArgs e)
+        {
+            oauth_config config = oauth_helper.get_config("taobao");
+            string appkey = config.oauth_app_id;// "test";
+
+            string secret = config.oauth_app_key;// "test";
+
+            string session = config.session;// "test";
+
+            string appurl = config.oauth_app_url;
+
+            IDictionary<string, string> param = new Dictionary<string, string>();
+
+            param.Add("fields", "user_id,nick,type");
+
+            // param.Add("nick", "sandbox_c_1");
+
+            //  appurl = "http://gw.api.tbsandbox.com/router/rest";
+
+            //Util.Post 集成了 系统参数 和 计算 sign的方法
+
+            string str = string.Format("返回结果：" + Util.Post(appurl, appkey, secret, "taobao.user.seller.get", session, param, "json"));
+
+            txtJson.Text = str;
+        }
 
 
+        private void btnlijing_Click(object sender, EventArgs e)
+        {
+            oauth_config config = oauth_helper.get_config("taobao");
+            string appkey = config.oauth_app_id;// "test";
+
+            string secret = config.oauth_app_key;// "test";
+
+            string session = config.session;// "test";
+
+            string appurl = config.oauth_app_url;
+
+            IDictionary<string, string> param = new Dictionary<string, string>();
+
+            //param.Add("fields", "user_id,nick,type");
+
+            // param.Add("nick", "sandbox_c_1");
+
+            //  appurl = "http://gw.api.tbsandbox.com/router/rest";
+
+            //Util.Post 集成了 系统参数 和 计算 sign的方法
+
+            string str = string.Format("返回结果：" + Util.Post(appurl, appkey, secret, "qimen.taobao.lijing.test.read", session, param, "json"));
+
+            txtJson.Text = str;
+        }
+
+        private void btnkeyword_Click(object sender, EventArgs e)
+        {
 
 
+            oauth_config config = oauth_helper.get_config("taobao");
+            string appkey = config.oauth_app_id;// "test";
 
+            string secret = config.oauth_app_key;// "test";
 
+            string session = config.session;// "test";
 
+            string appurl = config.oauth_app_url;
 
+            IDictionary<string, string> param = new Dictionary<string, string>();
+
+            param.Add("content", "文本信息");
+
+            // param.Add("nick", "sandbox_c_1");
+
+            //  appurl = "http://gw.api.tbsandbox.com/router/rest";
+
+            //Util.Post 集成了 系统参数 和 计算 sign的方法
+
+            string str = string.Format("返回结果：" + Util.Post(appurl, appkey, secret, "taobao.kfc.keyword.search", session, param, "json"));
+
+            txtJson.Text = str;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            oauth_config config = oauth_helper.get_config("taobao");
+            string appkey = config.oauth_app_id;// "test";
+
+            string secret = config.oauth_app_key;// "test";
+
+            string session = config.session;// "test";
+
+            string appurl = config.oauth_app_url;
+
+            IDictionary<string, string> param = new Dictionary<string, string>();
+
+            // param.Add("content", "文本信息");
+
+            // param.Add("nick", "sandbox_c_1");
+
+            //  appurl = "http://gw.api.tbsandbox.com/router/rest";
+
+            //Util.Post 集成了 系统参数 和 计算 sign的方法
+            string resurtJson = Util.Post(appurl, appkey, secret, "taobao.top.ipout.get", session, param, "json");
+            JsonData jd = JsonMapper.ToObject(resurtJson);
+
+            string str = string.Format("返回结果：" + jd["top_ipout_get_response"]["ip_list"].ToString());
+
+            txtJson.Text = str;
+
+        }
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         #endregion
+
+        #region 基本方法
+        protected override void InitData()
+        {
+            this.url = System.Configuration.ConfigurationManager.AppSettings["appUrl"];
+            this.appkey = System.Configuration.ConfigurationManager.AppSettings["appKey"];
+            this.secret = System.Configuration.ConfigurationManager.AppSettings["appSecret"];
+            this.callbackUrl = System.Configuration.ConfigurationManager.AppSettings["callbackUrl"];
+        }
+
+        protected override void LoadData()
+        {
+            //ITopClient client = new DefaultTopClient(url, appkey, secret);
+            //UserBuyerGetRequest req = new UserBuyerGetRequest();
+            //req.Fields = "nick,sex";
+            //UserBuyerGetResponse rsp = client.Execute(req, sessionKey);
+            //Console.WriteLine(rsp.Body);
+        }
+
+        public string GetTimeStamp(System.DateTime time)
+        {
+            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1, 0, 0, 0, 0));
+            long t = (time.Ticks - startTime.Ticks) / 10000;   //除10000调整为13位      
+            return t.ToString();
+        }
+
+        //打开监听
+        public void StartAPISocket()
+        {
+            try
+            {
+
+                if (server == null)
+                {
+                    string ipString = System.Configuration.ConfigurationManager.AppSettings["ServerIP"];
+                    string portString = System.Configuration.ConfigurationManager.AppSettings["ServerPort"];
+                    server = new SocketsServer(SeverPrint, ipString, DataTypeConvert.ToInt32(portString, 3780), this);
+                    Console.WriteLine("socket启动成功");
+                }
+                if (!server.started) server.start();
+            }
+            catch (Exception ex)
+            {
+                WriteExceptionLog(ex);
+            }
+        }
+
+        // 服务器端输出信息
+        private void SeverPrint(string info)
+        {
+            Console.WriteLine(info);
+
+            if (labTest.IsDisposed) server.print = null;
+            else
+            {
+                if (labTest.InvokeRequired)
+                {
+                    SocketsServer.Print F = new SocketsServer.Print(SeverPrint);
+                    this.Invoke(F, new object[] { info });
+                }
+                else
+                {
+                    if (info != "")
+                    {
+                        labTest.Text = info;
+                        btnOAuth.Text = "授权成功";
+                        txtJson.Text = "";
+                        oauth_config config = oauth_helper.get_config("taobao");
+
+                        if (config == null) return;
+                        foreach (System.Reflection.PropertyInfo p in config.GetType().GetProperties())
+                        {
+                            txtJson.Text += string.Format("Name:{0} Value:{1}", p.Name, p.GetValue(config, null)) + "\r\n";
+                        }
+                        //labTest.SelectionColor = Color.Green;
+                        //labTest.AppendText(info);
+                        //labTest.AppendText(Environment.NewLine);
+                        //labTest.ScrollToCaret();
+                    }
+                }
+            }
+        }
+        #endregion
+
 
 
 

@@ -26,7 +26,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaobaoTest
+namespace ThinkCRM.Infrastructure.DataEntity.Co
 {
     [DataContract]
     public class Top_auth_token_create_response

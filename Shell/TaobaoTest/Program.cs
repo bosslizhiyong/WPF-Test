@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThinkNet.Component;
 using WCFWeb.Infrastructure.Co;
-using ThinkNet.Component;
 using ThinkNet.Utility;
 using ThinkNet.Autofac;
 

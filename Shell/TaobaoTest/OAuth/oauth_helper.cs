@@ -55,7 +55,7 @@ namespace TaobaoTest
             //配置文件
             if (oauth_name == "taobao")
             {
-                string fullPath = Utils.GetMapPath("./xmlconfig/configtaobao.config");
+                string fullPath = Utils.GetMapPath("./xmlconfig/configtaobao.xml");
 
          //   file:///E:/WFC-Test/WPF-Test/WPF-Test/Shell/TaobaoTest/bin/Debug/xmlconfig/configtaobao.xml
                 XmlDocument doc = new XmlDocument();
@@ -76,6 +76,8 @@ namespace TaobaoTest
                 config.oauth_app_key = _appSecret.InnerText;
                 config.oauth_app_url = _appUrl.InnerText;
                 config.return_uri = _return_url.InnerText;
+                config.code = _appcode.InnerText;
+                config.session = _appsession.InnerText;
                 return config;
             }
             return null;

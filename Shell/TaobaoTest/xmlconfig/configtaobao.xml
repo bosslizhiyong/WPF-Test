@@ -15,8 +15,8 @@
     <!--页面跳转同步返回页面文件路径 要用 http://格式的完整路径，不允许加?id=123这类自定义参数-->
     <return_url>http://127.0.0.1:1608/AuthorityService/client/GetCallbackCode</return_url>
     
-    <code>0</code>
-    <session>0</session>
+    <code>M3VxdNty5qBy38jKPgW7PLlj2244169</code>
+    <session>620060132ZZ108a0111b657e22373ceb7a54f88c6fc401d1837606616</session>
 </Root>
 
 

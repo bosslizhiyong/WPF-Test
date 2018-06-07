@@ -1,5 +1,6 @@
 using System;
 using ThinkNet.Component;
+using TaobaoTest;
 
 namespace WCFWeb.Co.ApiHost
 {

@@ -13,7 +13,7 @@ using System.Text;
 using WCFWeb.Co;
 using ThinkNet.Component;
 using ThinkNet.Utility;
-using WCFWeb.Co.ApiHost;
+using TaobaoTest;
 
 namespace WCFWeb.Co.ApiHost
 {
@@ -40,7 +40,7 @@ namespace WCFWeb.Co.ApiHost
         public DataTable DtSericer { get { return _dtService; } }
 
         //sockets
-        //public SocketsClient client;    // 客户端实例
+        public SocketsClient client;    // 客户端实例
 
         #endregion 字    段
 
@@ -50,7 +50,7 @@ namespace WCFWeb.Co.ApiHost
             {
                 //程序集路径
                 _path = Assembly.GetEntryAssembly().Location;
-                //ConnectService();
+                ConnectService();
             }
             catch (Exception ex)
             {
@@ -90,14 +90,14 @@ namespace WCFWeb.Co.ApiHost
                         }
                         StartService(serviceType, numID++);//启动服务
                         serviceDesc = GetServiceDescription(serviceType.GetCustomAttributes(typeof(DescriptionAttribute), false), serviceType.Name);
-                        AddServiceToDataTable(serviceDesc, "运行", el.Name,"");
+                        AddServiceToDataTable(serviceDesc, "运行", el.Name, "");
                     }
                     catch (Exception ex)
                     {
-                        AddServiceToDataTable(el.Name, "失败", el.Name,ex.Message);
-                      
+                        AddServiceToDataTable(el.Name, "失败", el.Name, ex.Message);
+
                     }
-             
+
                 }
                 Console.WriteLine("ApiHost服务启动成功！");
                 Console.ReadLine();
@@ -152,7 +152,7 @@ namespace WCFWeb.Co.ApiHost
         /// <param name="serviceName">服务名称</param>
         /// <param name="serviceStatus">服务状态</param>
         /// <param name="serviceMemo">服务描述</param>
-        private void AddServiceToDataTable(string serviceName, string serviceStatus, string serviceMemo,string serviceCountent)
+        private void AddServiceToDataTable(string serviceName, string serviceStatus, string serviceMemo, string serviceCountent)
         {
             DataRow row = _dtService.NewRow();
             row["ServiceName"] = serviceName;
@@ -193,57 +193,73 @@ namespace WCFWeb.Co.ApiHost
 
         #endregion 启动和关闭WCF服务
 
+        #region SocketAPI
 
         public Socket socket;
-       // public ThinkCRM.Api.Co.SocketsClient.Print print;// 运行时的信息输出方法
+        public TaobaoTest.SocketsClient.Print print;// 运行时的信息输出方法
         public bool connected = false;          // 标识当前是否连接到服务器
         public string localIpPort = "";         // 记录本地ip端口信息
 
         ////sockets
-        //private void ConnectService()
-        //{
-        //    try
-        //    {
-        //        if (client == null)
-        //        {
-        //            string ipString = System.Configuration.ConfigurationManager.AppSettings["ServerIP"];
-        //            string portString = System.Configuration.ConfigurationManager.AppSettings["ServerPort"];
-        //            client = new SocketsClient(print, ipString, DataTypeConvert.ToInt32(portString, 3780));
-        //        }
-        //        if (!client.connected) client.start();
-        //        if (client != null) Console.WriteLine("客户端" + "" + client.localIpPort);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("客户端" + "" + ex.Message);
-        //    }
-        //}
-        ////关闭
-        //public void SeedcColeseSertvice()
-        //{
-        //    try
-        //    {
-        //        client.Send("关闭");
-        //        Console.WriteLine("关闭服务端");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        if (print != null) print("服务器端已断开，【" + socket.RemoteEndPoint.ToString() + "】");
-        //    }
+        private void ConnectService()
+        {
+            try
+            {
+                if (client == null)
+                {
+                    string ipString = System.Configuration.ConfigurationManager.AppSettings["ServerIP"];
+                    string portString = System.Configuration.ConfigurationManager.AppSettings["ServerPort"];
+                    client = new SocketsClient(print, ipString, DataTypeConvert.ToInt32(portString, 3780));
+                }
+                if (!client.connected) client.start();
+                if (client != null) Console.WriteLine("客户端" + "" + client.localIpPort);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("客户端" + "" + ex.Message);
+            }
+        }
+        //关闭
+        public void SeedcColeseSertvice()
+        {
+            try
+            {
+                client.Send("关闭");
+                Console.WriteLine("关闭服务端");
+            }
+            catch (Exception ex)
+            {
+                if (print != null) print("服务器端已断开，【" + socket.RemoteEndPoint.ToString() + "】");
+            }
 
-        //}
-        ////打开
-        //public void SeedOpenSertvice()
-        //{
-        //    try
-        //    {
-        //        client.Send("打开");
-        //        Console.WriteLine("打开服务端");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        if (print != null) print("服务器端已断开，【" + socket.RemoteEndPoint.ToString() + "】");
-        //    }
-        //}
+        }
+        //打开
+        public void SeedOpenSertvice()
+        {
+            try
+            {
+                client.Send("打开");
+                Console.WriteLine("打开服务端");
+            }
+            catch (Exception ex)
+            {
+                if (print != null) print("服务器端已断开，【" + socket.RemoteEndPoint.ToString() + "】");
+            }
+        }
+
+        public void SeedSessionKey(string sessionKey)
+        {
+            try
+            {
+                client.Send("WCF-" + sessionKey);
+            }
+            catch (Exception ex)
+            {
+                if (print != null) print("服务器端已断开，【" + socket.RemoteEndPoint.ToString() + "】");
+            }
+        }
+
+        #endregion
+
     }
 }
